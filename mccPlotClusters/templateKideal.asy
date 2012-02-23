@@ -1,7 +1,7 @@
 import settings;
 import plain;
 
-outformat="pdf";
+outformat="jpg";
 int sz = 700;
 size(sz,sz);
 pen dashed=linetype(new real[] {8,8});
@@ -48,3 +48,4 @@ for(int i=0;i<no_cluster_arcs;++i)
 	if(cluster_arc_type[i] == 3)
 		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size,rgb(0,0,0) + 2);
 }
+shipout(bbox(Fill(rgb(1,1,1))));

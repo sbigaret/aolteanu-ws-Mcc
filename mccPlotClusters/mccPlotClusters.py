@@ -4,6 +4,7 @@ import getopt
 import subprocess
 
 import PyXMCDA
+import base64
 
 from PlotClusters import *
 
@@ -96,9 +97,61 @@ def main(argv=None):
             
             try:
                 PC.PlotKideal(out_dir)
+                fo = open(out_dir+"/Kideal.xml",'w')
+                PyXMCDA.writeHeader(fo)
+                fo.write('<alternativeValue>\n')
+                fo.write('\t<value>\n')
+                fo.write('\t\t<image>')
+                fo.write(base64.encodestring(open(out_dir+"/Kideal.jpg","rb").read()))
+                fo.write('</image>\n')
+                fo.write('\t</value>\n')
+                fo.write('</alternativeValue>\n')
+                PyXMCDA.writeFooter(fo)
+                fo.close()
+                os.remove(out_dir+'/Kideal.jpg')
+                
                 PC.PlotKreal(out_dir)
+                fo = open(out_dir+"/Kreal.xml",'w')
+                PyXMCDA.writeHeader(fo)
+                fo.write('<alternativeValue>\n')
+                fo.write('\t<value>\n')
+                fo.write('\t\t<image>')
+                fo.write(base64.encodestring(open(out_dir+"/Kreal.jpg","rb").read()))
+                fo.write('</image>\n')
+                fo.write('\t</value>\n')
+                fo.write('</alternativeValue>\n')
+                PyXMCDA.writeFooter(fo)
+                fo.close()
+                os.remove(out_dir+'/Kreal.jpg')
+                
                 PC.PlotKidealsum(out_dir)
-                PC.PlotKrealsum(out_dir)
+                fo = open(out_dir+"/Kidealsum.xml",'w')
+                PyXMCDA.writeHeader(fo)
+                fo.write('<alternativeValue>\n')
+                fo.write('\t<value>\n')
+                fo.write('\t\t<image>')
+                fo.write(base64.encodestring(open(out_dir+"/Kidealsum.jpg","rb").read()))
+                fo.write('</image>\n')
+                fo.write('\t</value>\n')
+                fo.write('</alternativeValue>\n')
+                PyXMCDA.writeFooter(fo)
+                fo.close()
+                os.remove(out_dir+'/Kidealsum.jpg')
+                
+                PC.PlotKrealsum(out_dir)      
+                fo = open(out_dir+"/Krealsum.xml",'w')
+                PyXMCDA.writeHeader(fo)
+                fo.write('<alternativeValue>\n')
+                fo.write('\t<value>\n')
+                fo.write('\t\t<image>')
+                fo.write(base64.encodestring(open(out_dir+"/Krealsum.jpg","rb").read()))
+                fo.write('</image>\n')
+                fo.write('\t</value>\n')
+                fo.write('</alternativeValue>\n')
+                PyXMCDA.writeFooter(fo)
+                fo.close()
+                os.remove(out_dir+'/Krealsum.jpg')              
+
             except Exception as e: errorList.append("Could not plot clusters.")
             
         # Creating log and error file, messages.xml
@@ -118,3 +171,4 @@ if __name__ == "__main__":
 
 
             
+

@@ -1,7 +1,7 @@
 import settings;
 import plain;
 
-outformat="pdf";
+outformat="jpg";
 int sz = 700;
 size(sz,sz);
 pen dashed=linetype(new real[] {8,8});
@@ -129,4 +129,5 @@ for(int i=0;i<no_clusters;++i)
 		k = k+1;
 	}
 }
+shipout(bbox(Fill(rgb(1,1,1))));
 

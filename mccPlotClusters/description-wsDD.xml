@@ -54,25 +54,25 @@
                      <documentation>
                             <description>Visualization of the ideal preference relation between alternatives, with respect to the current clusters.</description>
                      </documentation>
-                     <xmcda tag="pdf"/>
+                     <xmcda tag="alternativeValue"/>
               </output>
 	      <output id="Kreal" name="Kreal" displayName="Kreal">
                      <documentation>
                             <description>Visualization of the real preference relation between alternatives, with respect to the current clusters.</description>
                      </documentation>
-                     <xmcda tag="pdf"/>
+                     <xmcda tag="alternativeValue"/>
               </output>  
 	      <output id="Kidealsum" name="Kidealsum" displayName="Kidealsum">
                      <documentation>
                             <description>Visualization of the summary of the ideal preference relation between alternatives, with respect to the current clusters.</description>
                      </documentation>
-                     <xmcda tag="pdf"/>
+                     <xmcda tag="alternativeValue"/>
               </output>  
 	      <output id="Krealsum" name="Krealsum" displayName="Krealsum">
                      <documentation>
                             <description>Visualization of the summary of the real preference relation between alternatives, with respect to the current clusters.</description>
                      </documentation>
-                     <xmcda tag="pdf"/>
+                     <xmcda tag="alternativeValue"/>
               </output>    
        </parameters>
 </program_description>

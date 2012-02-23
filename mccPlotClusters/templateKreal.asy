@@ -1,7 +1,7 @@
 import settings;
 import plain;
 
-outformat="pdf";
+outformat="jpg";
 int sz = 700;
 size(sz,sz);
 pen dashed=linetype(new real[] {8,8});
@@ -55,3 +55,4 @@ for(int i=0;i<no_obj;++i)
 	draw(circle((x1,y1),circle_size),rgb(0.0,0.0,0.0)+2);
 	label(labels[i],(x1,y1),rgb(0.0,0.0,0.0)+fontsize(24));
 }
+shipout(bbox(Fill(rgb(1,1,1))));
