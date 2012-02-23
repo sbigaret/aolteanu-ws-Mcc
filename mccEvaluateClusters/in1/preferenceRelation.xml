@@ -1,0 +1,4322 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>
+<xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2009/XMCDA-2.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2009/XMCDA-2.0.0 http://sma.uni.lu/d2cms/xmcda/_downloads/XMCDA-2.0.0.xsd'>
+
+<alternativesComparisons>
+	<pairs>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a03</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a07</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a12</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a10</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a08</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a05</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a04</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a01</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a06</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a02</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a09</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a11</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a03</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a07</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a12</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a10</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a08</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a05</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a04</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a01</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a06</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a13</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a02</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a09</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>a14</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>a14</alternativeID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>1.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+	</pairs>
+</alternativesComparisons>
+
+</xmcda:XMCDA>
