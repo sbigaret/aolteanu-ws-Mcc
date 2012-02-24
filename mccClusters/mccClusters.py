@@ -18,13 +18,11 @@ def main(argv=None):
 
     parser.add_option("-i", "--in", dest="in_dir")
     parser.add_option("-o", "--out", dest="out_dir")
-    parser.add_option("--mtype", dest="method_type")
 
     (options, args) = parser.parse_args(argv[1:])
 
     in_dir = options.in_dir
     out_dir = options.out_dir
-    method_type = options.method_type
 
     # Creating a list for error messages
     errorList = []
@@ -33,35 +31,41 @@ def main(argv=None):
         errorList.append("option --in is missing")
     if not out_dir:
         errorList.append("option --out is missing")
-    if not method_type:
-        method_type = 'NR'
     
     if not errorList:
         if not os.path.isfile (in_dir+"/alternatives.xml"):
             errorList.append("alternatives.xml is missing")
         if not os.path.isfile (in_dir+"/preferenceRelation.xml"):
             errorList.append("preferenceRelation.xml is missing")
+        if not os.path.isfile (in_dir+"/methodParameters.xml"):
+            errorList.append("methodParameters.xml is missing")
 
     if not errorList:
         # We parse all the mandatory input files
         xmltree_alternatives = PyXMCDA.parseValidate(in_dir+"/alternatives.xml")
         xmltree_preferenceRelation = PyXMCDA.parseValidate(in_dir+"/preferenceRelation.xml")
+	xmltree_methodParameters = PyXMCDA.parseValidate(in_dir+"/methodParameters.xml")
         
         # We check if all mandatory input files are valid
         if xmltree_alternatives == None :
             errorList.append("alternatives.xml can't be validated.")
         if xmltree_preferenceRelation == None :
             errorList.append("preferenceRelation.xml can't be validated.")
+        if xmltree_methodParameters == None :
+            errorList.append("methodParameters.xml can't be validated.")
             
         if not errorList :
 
             alternativesId = PyXMCDA.getAlternativesID(xmltree_alternatives)
             alternativesRel = PyXMCDA.getAlternativesComparisonsValues(xmltree_preferenceRelation, alternativesId)
+	    method_type = PyXMCDA.getParameterByName(xmltree_methodParameters, "type")
 
             if not alternativesId :
                 errorList.append("No active alternatives found.")
             if not alternativesRel :
                 errorList.append("Problems between relation and alternatives.")
+	    if not method_type:
+                errorList.append("No method type found.")
 
         if not errorList :
             

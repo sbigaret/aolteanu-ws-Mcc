@@ -1,5 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>
 <xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2009/XMCDA-2.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2009/XMCDA-2.0.0 http://sma.uni.lu/d2cms/xmcda/_downloads/XMCDA-2.0.0.xsd'>
 
 <categoriesComparisons>
@@ -57,6 +56,28 @@
 			</terminal>
 			<values>
 				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>5.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>1</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>4</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
 					<real>2.0</real>
 				</value>
 				<value id="p+">
@@ -75,39 +96,17 @@
 				<categoryID>1</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>4</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
-					<real>0.0</real>
-				</value>
-				<value id="p-">
-					<real>0.0</real>
-				</value>
-				<value id="j">
-					<real>5.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>1</categoryID>
-			</initial>
-			<terminal>
 				<categoryID>5</categoryID>
 			</terminal>
 			<values>
 				<value id="i">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 				<value id="p+">
-					<real>0.0</real>
+					<real>4.0</real>
 				</value>
 				<value id="p-">
-					<real>5.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="j">
 					<real>0.0</real>
@@ -123,16 +122,16 @@
 			</terminal>
 			<values>
 				<value id="i">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>4.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p-">
 					<real>0.0</real>
 				</value>
 				<value id="j">
-					<real>0.0</real>
+					<real>5.0</real>
 				</value>
 			</values>
 		</pair>
@@ -192,10 +191,10 @@
 					<real>2.0</real>
 				</value>
 				<value id="p+">
-					<real>2.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p-">
-					<real>1.0</real>
+					<real>3.0</real>
 				</value>
 				<value id="j">
 					<real>0.0</real>
@@ -211,13 +210,13 @@
 			</terminal>
 			<values>
 				<value id="i">
-					<real>0.0</real>
+					<real>2.0</real>
 				</value>
 				<value id="p+">
-					<real>5.0</real>
+					<real>2.0</real>
 				</value>
 				<value id="p-">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 				<value id="j">
 					<real>0.0</real>
@@ -233,13 +232,13 @@
 			</terminal>
 			<values>
 				<value id="i">
-					<real>2.0</real>
-				</value>
-				<value id="p+">
 					<real>0.0</real>
 				</value>
+				<value id="p+">
+					<real>5.0</real>
+				</value>
 				<value id="p-">
-					<real>3.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="j">
 					<real>0.0</real>
@@ -277,10 +276,10 @@
 			</terminal>
 			<values>
 				<value id="i">
-					<real>2.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>3.0</real>
+					<real>5.0</real>
 				</value>
 				<value id="p-">
 					<real>0.0</real>
@@ -302,10 +301,10 @@
 					<real>2.0</real>
 				</value>
 				<value id="p+">
-					<real>1.0</real>
+					<real>3.0</real>
 				</value>
 				<value id="p-">
-					<real>2.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="j">
 					<real>0.0</real>
@@ -346,13 +345,13 @@
 					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 				<value id="p-">
 					<real>0.0</real>
 				</value>
 				<value id="j">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 			</values>
 		</pair>
@@ -368,10 +367,10 @@
 					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 				<value id="p-">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="j">
 					<real>0.0</real>
@@ -409,160 +408,6 @@
 			</terminal>
 			<values>
 				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
-					<real>0.0</real>
-				</value>
-				<value id="p-">
-					<real>0.0</real>
-				</value>
-				<value id="j">
-					<real>5.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>4</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>2</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
-					<real>0.0</real>
-				</value>
-				<value id="p-">
-					<real>5.0</real>
-				</value>
-				<value id="j">
-					<real>0.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>4</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>3</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
-					<real>0.0</real>
-				</value>
-				<value id="p-">
-					<real>0.0</real>
-				</value>
-				<value id="j">
-					<real>1.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>4</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>4</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
-					<real>0.0</real>
-				</value>
-				<value id="p-">
-					<real>0.0</real>
-				</value>
-				<value id="j">
-					<real>0.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>4</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>5</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
-					<real>0.0</real>
-				</value>
-				<value id="p-">
-					<real>1.0</real>
-				</value>
-				<value id="j">
-					<real>0.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>4</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>6</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
-					<real>0.0</real>
-				</value>
-				<value id="p-">
-					<real>0.0</real>
-				</value>
-				<value id="j">
-					<real>1.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>5</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>1</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
-					<real>5.0</real>
-				</value>
-				<value id="p-">
-					<real>0.0</real>
-				</value>
-				<value id="j">
-					<real>0.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>5</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>2</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
 					<real>2.0</real>
 				</value>
 				<value id="p+">
@@ -578,7 +423,29 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>4</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>2</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>2.0</real>
+				</value>
+				<value id="p+">
+					<real>1.0</real>
+				</value>
+				<value id="p-">
+					<real>2.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>4</categoryID>
 			</initial>
 			<terminal>
 				<categoryID>3</categoryID>
@@ -588,10 +455,10 @@
 					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p-">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 				<value id="j">
 					<real>0.0</real>
@@ -600,7 +467,7 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>4</categoryID>
 			</initial>
 			<terminal>
 				<categoryID>4</categoryID>
@@ -610,28 +477,6 @@
 					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>1.0</real>
-				</value>
-				<value id="p-">
-					<real>0.0</real>
-				</value>
-				<value id="j">
-					<real>0.0</real>
-				</value>
-			</values>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>5</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>5</categoryID>
-			</terminal>
-			<values>
-				<value id="i">
-					<real>0.0</real>
-				</value>
-				<value id="p+">
 					<real>0.0</real>
 				</value>
 				<value id="p-">
@@ -644,10 +489,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>4</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>6</categoryID>
+				<categoryID>5</categoryID>
 			</terminal>
 			<values>
 				<value id="i">
@@ -666,7 +511,29 @@
 		</pair>
 		<pair>
 			<initial>
+				<categoryID>4</categoryID>
+			</initial>
+			<terminal>
 				<categoryID>6</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>5</categoryID>
 			</initial>
 			<terminal>
 				<categoryID>1</categoryID>
@@ -688,6 +555,138 @@
 		</pair>
 		<pair>
 			<initial>
+				<categoryID>5</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>2</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>5.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>5</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>3</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>5</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>4</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>1.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>5</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>5</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>0.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>5</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>6</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>1.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>6</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>1</categoryID>
+			</terminal>
+			<values>
+				<value id="i">
+					<real>0.0</real>
+				</value>
+				<value id="p+">
+					<real>0.0</real>
+				</value>
+				<value id="p-">
+					<real>0.0</real>
+				</value>
+				<value id="j">
+					<real>5.0</real>
+				</value>
+			</values>
+		</pair>
+		<pair>
+			<initial>
 				<categoryID>6</categoryID>
 			</initial>
 			<terminal>
@@ -767,10 +766,10 @@
 					<real>0.0</real>
 				</value>
 				<value id="p-">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="j">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 			</values>
 		</pair>

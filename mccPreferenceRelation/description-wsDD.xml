@@ -21,7 +21,7 @@
 						<boolean>%1</boolean>
 					</value>
 				</parameter>
-				<parameter name="cutlevel">
+				<parameter name="cutlvl">
 					<value>
 						<real>%2</real>
 					</value>
@@ -35,9 +35,9 @@
                                    </documentation>
                                    <defaultValue>False</defaultValue>
                             </entry>
-                            <entry id="%2" type="float" displayName="Threshold">
+                            <entry id="%2" type="float" displayName="Cut Level">
                                    <documentation>
-                                          <description>Indicates cut threshold.</description>
+                                          <description>Indicates cutting threshold.</description>
                                    </documentation>
                                    <defaultValue>0.5</defaultValue>
                             </entry>

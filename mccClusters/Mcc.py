@@ -7,19 +7,19 @@ class Mcc(object):
         self.R = relation
         self.type = methodType
         self.Q = ['p+','p-']
-        if methodType == 'NR':
+        if methodType == "NR":
             self.Neighbours = self.Neighbours_1
             self.Fitness = self.O_1
-        elif methodType == 'R':
+        elif methodType == "R":
             self.Neighbours = self.Neighbours_2
             self.Fitness = self.O_2
-        elif methodType == 'O':
+        elif methodType == "O":
             self.Neighbours = self.Neighbours_3
             self.Fitness = self.O_3
-        elif methodType == 'QR':
+        elif methodType == "QR":
             self.Neighbours = self.Neighbours_4
             self.Fitness = self.O_4
-        elif methodType == 'QO':
+        elif methodType == "QO":
             self.Neighbours = self.Neighbours_5
             self.Fitness = self.O_5
         
@@ -58,8 +58,8 @@ class Mcc(object):
                 R['p-'] += self.R[o][p]['p-']
                 R['j'] += self.R[o][p]['j']
         L = ['p+','p-','j']
-        if self.type == 'O' or self.type == 'QO':
-            L = ['p+','p-']
+        if self.type == "O" or self.type == "QO":
+            L = L[:-1]
 
         p = 0
         max = -1

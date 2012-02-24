@@ -1101,7 +1101,8 @@ def xmlWrite (xmltree, xmlFileName):
 
 
 def writeHeader (xmlfile) :
-	xmlfile.write ("<?xml version='1.0' encoding='UTF-8'?>\n<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>\n")
+	xmlfile.write ("<?xml version='1.0' encoding='UTF-8'?>\n")
+	#<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>\n")
 	xmlfile.write("<xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2009/XMCDA-2.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2009/XMCDA-2.0.0 http://sma.uni.lu/d2cms/xmcda/_downloads/XMCDA-2.0.0.xsd'>\n\n")
 
 

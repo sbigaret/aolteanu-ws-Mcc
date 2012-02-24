@@ -1,7 +1,7 @@
 import settings;
 import plain;
 
-outformat="jpg";
+outformat="png";
 int sz = 700;
 size(sz,sz);
 pen dashed=linetype(new real[] {8,8});

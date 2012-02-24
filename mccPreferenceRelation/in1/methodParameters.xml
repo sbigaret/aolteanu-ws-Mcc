@@ -4,7 +4,7 @@
 		<parameter name="bipolar">
 			<value><boolean>true</boolean></value>
 		</parameter>
-		<parameter name="cutlevel">
+		<parameter name="cutlvl">
 			<value><real>0.5</real></value>
 		</parameter>
 	</methodParameters>

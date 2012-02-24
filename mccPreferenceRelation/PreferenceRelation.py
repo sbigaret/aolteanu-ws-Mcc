@@ -1,11 +1,11 @@
 class PreferenceRelation(object):
-    def __init__(self, objects, S, SCutType, SCutLevel):
+    def __init__(self, objects, S, bipolar, cutlvl):
         
         self.objects = objects
         self.N = len(objects)
         self.S = S
-        self.Scuttype = SCutType
-        self.Scutlvl = SCutLevel
+        self.bipolar = bipolar
+        self.cutlvl = cutlvl
         
     def ExtractR(self):
         R = {}
@@ -21,8 +21,8 @@ class PreferenceRelation(object):
                 p = self.objects[j]
                 oSp = 0
                 pSo = 0
-                if self.Scuttype == 'bipolar':
-                    if self.Scutlvl == 0.0:
+                if self.bipolar:
+                    if self.cutlvl == 0.0:
                         if self.S[o][p] < 0:
                             oSp = -1
                         elif self.S[o][p] > 0:
@@ -32,20 +32,20 @@ class PreferenceRelation(object):
                         elif self.S[p][o] > 0:
                             pSo = 1
                     else:
-                        if self.S[o][p] <= self.Scuttype:
+                        if self.S[o][p] <= self.cutlvl:
                             oSp = -1
-                        elif self.S[o][p] >= self.Scuttype:
+                        elif self.S[o][p] >= self.cutlvl:
                             oSp = 1
-                        if self.S[p][o] <= self.Scuttype:
+                        if self.S[p][o] <= self.cutlvl:
                             pSo = -1
-                        elif self.S[p][o] >= self.Scuttype:
+                        elif self.S[p][o] >= self.cutlvl:
                             pSo = 1
                 else:
-                    if self.S[o][p] <= self.Scutlvl:
+                    if self.S[o][p] <= self.cutlvl:
                         oSp = -1
                     else:
                         oSp = 1
-                    if self.S[p][o] <= self.Scutlvl:
+                    if self.S[p][o] <= self.cutlvl:
                         pSo = -1
                     else:
                         pSo = 1

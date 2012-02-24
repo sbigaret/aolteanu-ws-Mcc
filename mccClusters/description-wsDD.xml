@@ -11,7 +11,7 @@
        <parameters>
 		<input id="methodParameters" name="methodParameters" displayName="Method Type" isoptional="1">
                      <documentation>
-                            <description>Indicates the type of clustering result to find.</description>
+                            <description>Indicates the type of clustering result to find: Non-relations (NR), Relationa (R), Ordered (O), Q-exclusive Relational (QR),  Q-exclusive Ordered (QO).</description>
                      </documentation
                      <xmcda tag="methodParameters">
                         <![CDATA[
@@ -23,7 +23,7 @@
 				</parameter>
 			</methodParameters>]]>
                      </xmcda>
-                     <gui status="alwaysGUI">
+                     <gui status="preferGUI">
                             <entry id="%1" type="string" displayName="Method Type">
                                    <documentation>
                                           <description>Indicates the type of clustering result to find.</description>
