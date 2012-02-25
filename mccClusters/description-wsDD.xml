@@ -57,11 +57,16 @@
               
 	      <output id="clusters" name="clusters" displayName="clusters">
                      <documentation>
-                            <description>The computed clusters.</description>
+                            <description>The cluster names.</description>
                      </documentation>
 		     <xmcda tag="categories"/>
+              </output>     
+              <output id="alternativesAffectations" name="alternativesAffectations" displayName="alternativesAffectations">
+                     <documentation>
+                            <description>The alternatives affectations to the clusters.</description>
+                     </documentation>
                      <xmcda tag="alternativesAffectations"/>
-              </output>             
+              </output>                   
 
 	      <output id="clustersRelations" name="clustersRelations" displayName="clustersRelations">
                      <documentation>

@@ -41,6 +41,8 @@ def main(argv=None):
             errorList.append("preferenceRelation.xml is missing")
         if not os.path.isfile (in_dir+"/clusters.xml"):
             errorList.append("clusters.xml is missing")
+        if not os.path.isfile (in_dir+"/alternativesAffectations.xml"):
+            errorList.append("alternativesAffectations.xml is missing")
         if not os.path.isfile (in_dir+"/clustersRelations.xml"):
             errorList.append("clustersRelations.xml is missing")
 
@@ -49,6 +51,7 @@ def main(argv=None):
         xmltree_alternatives = PyXMCDA.parseValidate(in_dir+"/alternatives.xml")
         xmltree_preferenceRelation = PyXMCDA.parseValidate(in_dir+"/preferenceRelation.xml")
         xmltree_clusters = PyXMCDA.parseValidate(in_dir+"/clusters.xml")
+        xmltree_alternativesAffectations = PyXMCDA.parseValidate(in_dir+"/alternativesAffectations.xml")
         xmltree_clustersRelations = PyXMCDA.parseValidate(in_dir+"/clustersRelations.xml")
         
         # We check if all mandatory input files are valid
@@ -58,6 +61,8 @@ def main(argv=None):
             errorList.append("preferenceRelation.xml can't be validated.")
         if xmltree_clusters == None :
             errorList.append("clusters.xml can't be validated.")
+        if xmltree_alternativesAffectations == None :
+            errorList.append("alternativesAffectations.xml can't be validated.")
         if xmltree_clustersRelations == None :
             errorList.append("clustersRelations.xml can't be validated.")
             
@@ -66,7 +71,7 @@ def main(argv=None):
             alternativesId = PyXMCDA.getAlternativesID(xmltree_alternatives)
             alternativesRel = PyXMCDA.getAlternativesComparisonsValues(xmltree_preferenceRelation, alternativesId)
             clustersId = PyXMCDA.getCategoriesID(xmltree_clusters)
-            alternativesAffectations = PyXMCDA.getAlternativesAffectations(xmltree_clusters)
+            alternativesAffectations = PyXMCDA.getAlternativesAffectations(xmltree_alternativesAffectations)
             clusters = {}
             for cid in clustersId:
                 clusters[cid] = []

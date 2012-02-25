@@ -15,13 +15,29 @@ for(int i=0;i<no_arcs;++i)
 	x2 = arcs_x2[i];
 	y2 = arcs_y2[i];
 	if(arc_type[i] == 0)
-		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*circle_size,rgb(0,0,0) + 2,Arrows(20));
+	{
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*circle_size,rgb(0.3,0,0.3));
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x1,y1)+dir((x1,y1)--(x2,y2))*circle_size * 3,rgb(0.4,0,0.4) + 3);
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*circle_size * 3--(x2,y2)+dir((x2,y2)--(x1,y1))*circle_size,rgb(0.4,0,0.4) + 3);
+	}
 	if(arc_type[i] == 1)
-		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*circle_size,rgb(0,0,0) + 2,Arrow(20));
+	{
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*circle_size,rgb(0.3,0,0.3));
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x1,y1)+dir((x1,y1)--(x2,y2))*(circle_size * 3 - 15),rgb(1,0,0) + 3);
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*circle_size * 3--(x2,y2)+dir((x2,y2)--(x1,y1))*(circle_size + 15),rgb(0,0,1) + 3);
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x1,y1)+dir((x1,y1)--(x2,y2))*circle_size * 3,rgb(1,0,0),Arrow(20));
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*circle_size * 3--(x2,y2)+dir((x2,y2)--(x1,y1))*circle_size,rgb(0,0,1),Arrow(20));
+	}
 	if(arc_type[i] == 2)
-		draw((x2,y2)+dir((x2,y2)--(x1,y1))*circle_size--(x1,y1)-dir((x2,y2)--(x1,y1))*circle_size,rgb(0,0,0) + 2,Arrow(20));
+	{
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*circle_size,rgb(0.3,0,0.3));
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*circle_size--(x2,y2)+dir((x2,y2)--(x1,y1))*(circle_size * 3 - 15),rgb(1,0,0) + 3);
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size * 3--(x1,y1)+dir((x1,y1)--(x2,y2))*(circle_size + 15),rgb(0,0,1) + 3);
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*circle_size--(x2,y2)+dir((x2,y2)--(x1,y1))*circle_size * 3,rgb(1,0,0),Arrow(20));
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size * 3--(x1,y1)+dir((x1,y1)--(x2,y2))*circle_size,rgb(0,0,1),Arrow(20));
+	}
 	if(arc_type[i] == 3)
-		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*circle_size,rgb(0,0,0) + 2);
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*circle_size,rgb(0,0,0)+2);
 }
 for(int i=0;i<no_points;++i)
 {
@@ -40,12 +56,28 @@ for(int i=0;i<no_cluster_arcs;++i)
 	c1_circle_size = cluster_arcs_z1[i] + 2* circle_size;
 	c2_circle_size = cluster_arcs_z2[i] + 2* circle_size;
 	if(cluster_arc_type[i] == 0)
-		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size,rgb(0,0,0) + 2,Arrows(30));
+	{
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*c2_circle_size,rgb(0.3,0,0.3));
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x1,y1)+dir((x1,y1)--(x2,y2))*(c1_circle_size + circle_size*2),rgb(0.4,0,0.4) + 3);
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*(c2_circle_size + circle_size*2)--(x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size,rgb(0.4,0,0.4) + 3);
+	}
 	if(cluster_arc_type[i] == 1)
-		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size,rgb(0,0,0) + 2,Arrow(30));
+	{
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*c2_circle_size,rgb(0.3,0,0.3));
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x1,y1)+dir((x1,y1)--(x2,y2))*(c1_circle_size + circle_size*2-15),rgb(1,0,0) + 3);
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*(c2_circle_size + circle_size*2)--(x2,y2)+dir((x2,y2)--(x1,y1))*(c2_circle_size+15),rgb(0,0,1) + 3);
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x1,y1)+dir((x1,y1)--(x2,y2))*(c1_circle_size + circle_size*2),rgb(1,0,0),Arrow(20));
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*(c2_circle_size + circle_size*2)--(x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size,rgb(0,0,1),Arrow(20));
+	}
 	if(cluster_arc_type[i] == 2)
-		draw((x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size--(x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size,rgb(0,0,0) + 2,Arrow(30));
+	{
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*c2_circle_size,rgb(0.3,0,0.3));
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size--(x2,y2)+dir((x2,y2)--(x1,y1))*(c2_circle_size + circle_size*2-15),rgb(1,0,0) + 3);
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*(c1_circle_size + circle_size*2)--(x1,y1)+dir((x1,y1)--(x2,y2))*(c1_circle_size+15),rgb(0,0,1) + 3);
+		draw((x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size--(x2,y2)+dir((x2,y2)--(x1,y1))*(c2_circle_size + circle_size*2),rgb(1,0,0),Arrow(20));
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*(c1_circle_size + circle_size*2)--(x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size,rgb(0,0,1),Arrow(20));
+	}
 	if(cluster_arc_type[i] == 3)
-		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x2,y2)+dir((x2,y2)--(x1,y1))*c2_circle_size,rgb(0,0,0) + 2);
+		draw((x1,y1)+dir((x1,y1)--(x2,y2))*c1_circle_size--(x2,y2)-dir((x1,y1)--(x2,y2))*c2_circle_size,rgb(0,0,0)+2);
 }
 shipout(bbox(Fill(rgb(1,1,1))));

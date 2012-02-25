@@ -525,10 +525,10 @@
 					<real>0.0</real>
 				</value>
 				<value id="p-">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="j">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 			</values>
 		</pair>
@@ -723,10 +723,10 @@
 					<real>0.0</real>
 				</value>
 				<value id="p-">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="j">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 			</values>
 		</pair>
@@ -1292,13 +1292,13 @@
 					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p-">
 					<real>0.0</real>
 				</value>
 				<value id="j">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 			</values>
 		</pair>
@@ -2810,13 +2810,13 @@
 					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p-">
 					<real>0.0</real>
 				</value>
 				<value id="j">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 			</values>
 		</pair>
@@ -3995,10 +3995,10 @@
 			</terminal>
 			<values>
 				<value id="i">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p+">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 				<value id="p-">
 					<real>0.0</real>
@@ -4281,13 +4281,13 @@
 			</terminal>
 			<values>
 				<value id="i">
-					<real>1.0</real>
+					<real>0.0</real>
 				</value>
 				<value id="p+">
 					<real>0.0</real>
 				</value>
 				<value id="p-">
-					<real>0.0</real>
+					<real>1.0</real>
 				</value>
 				<value id="j">
 					<real>0.0</real>

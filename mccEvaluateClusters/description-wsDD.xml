@@ -25,9 +25,14 @@
               </input>     
 	      <input id="clusters" name="clusters" displayName="clusters">
                      <documentation>
-                            <description>The clusters of alternatives.</description>
+                            <description>The cluster names.</description>
                      </documentation>
 		     <xmcda tag="categories"/>
+              </input>     
+              <input id="alternativesAffectations" name="alternativesAffectations" displayName="alternativesAffectations">
+                     <documentation>
+                            <description>The alternatives affectations to the clusters.</description>
+                     </documentation>
                      <xmcda tag="alternativesAffectations"/>
               </input>             
 	      <input id="clustersRelations" name="clustersRelations" displayName="clustersRelations">

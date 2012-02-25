@@ -28,7 +28,7 @@
 				</parameter>
 			</methodParameters>]]>
                      </xmcda>
-                     <gui status="alwaysGUI">
+                     <gui status="preferGUI">
                             <entry id="%1" type="boolean" displayName="Bipolar">
                                    <documentation>
                                           <description>Indicates if the cutting procedure is bipolar or not.</description>

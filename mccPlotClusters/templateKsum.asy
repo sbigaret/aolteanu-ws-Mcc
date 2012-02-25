@@ -6,6 +6,7 @@ int sz = 700;
 size(sz,sz);
 pen dashed=linetype(new real[] {8,8});
 int circle_size = 70;
+int margin = 40;
 
 real x1,y1,x2,y2,a1,a2,a3,a4,ct;
 pair A1,A2,X,Y;
@@ -43,33 +44,46 @@ for(int i=0;i<no_clusters;++i)
 			y2 = y1;
 			if(a1>0.0)
 			{
-				draw((x1,y1)--(x2,y2),rgb(0,0,0) + 2,Arrows(20));
-				label(string(a1),((x1,y1)+(x2,y2))/2 + (0,10),rgb(0.0,0.0,0.0)+fontsize(24));
+				draw((x1,y1)--(x2,y2),rgb(0.3,0,0.3));
+				draw((x1,y1)--(x1,y1)+dir((x1,y1)--(x2,y2))*margin,rgb(0.4,0,0.4) + 3);
+				draw((x2,y2)--(x2,y2)+dir((x2,y2)--(x1,y1))*margin,rgb(0.4,0,0.4) + 3);
+				label(string(a1),((x1,y1)+(x2,y2))/2 + (0,13),rgb(0.0,0.0,0.0)+fontsize(24));
 				y1 = y1 - circle_size * 0.4;
 				y2 = y1;
 			}
 			if(a2>0.0)
 			{
-				draw((x1,y1)--(x2,y2),rgb(0,0,0) + 2,Arrow(20));
-				label(string(a2),((x1,y1)+(x2,y2))/2 + (0,10),rgb(0.0,0.0,0.0)+fontsize(24));
+				draw((x1,y1)--(x2,y2),rgb(0.3,0,0.3));
+				draw((x1,y1)--(x1,y1)+dir((x1,y1)--(x2,y2))*(margin-15),rgb(1,0,0) + 3);
+				draw((x2,y2)+dir((x2,y2)--(x1,y1))*margin--(x2,y2)+dir((x2,y2)--(x1,y1))*15,rgb(0,0,1) + 3);
+				draw((x1,y1)--(x1,y1)+dir((x1,y1)--(x2,y2))*margin,rgb(1,0,0) + 3,Arrow(20));
+				draw((x2,y2)+dir((x2,y2)--(x1,y1))*margin--(x2,y2),rgb(0,0,1) + 3,Arrow(20));
+				label(string(a2),((x1,y1)+(x2,y2))/2 + (0,13),rgb(0.0,0.0,0.0)+fontsize(24));
 				y1 = y1 - circle_size * 0.4;
 				y2 = y1;
 			}
 			if(a3>0.0)
 			{
-				draw((x2,y2)--(x1,y1),rgb(0,0,0) + 2,Arrow(20));
-				label(string(a3),((x1,y1)+(x2,y2))/2 + (0,10),rgb(0.0,0.0,0.0)+fontsize(24));
+				draw((x1,y1)--(x2,y2),rgb(0.3,0,0.3));
+				draw((x2,y2)--(x2,y2)+dir((x2,y2)--(x1,y1))*(margin-15),rgb(1,0,0) + 3);
+				draw((x1,y1)+dir((x1,y1)--(x2,y2))*margin--(x1,y1)+dir((x1,y1)--(x2,y2))*15,rgb(0,0,1) + 3);
+				draw((x2,y2)--(x2,y2)+dir((x2,y2)--(x1,y1))*margin,rgb(1,0,0) + 3,Arrow(20));
+				draw((x1,y1)+dir((x1,y1)--(x2,y2))*margin--(x1,y1),rgb(0,0,1) + 3,Arrow(20));
+				label(string(a3),((x1,y1)+(x2,y2))/2 + (0,13),rgb(0.0,0.0,0.0)+fontsize(24));
 				y1 = y1 - circle_size * 0.4;
 				y2 = y1;
 			}
 			if(a4>0.0)
 			{
 				draw((x1,y1)--(x2,y2),rgb(0,0,0) + 2);
-				label(string(a4),((x1,y1)+(x2,y2))/2 + (0,10),rgb(0.0,0.0,0.0)+fontsize(24));
+				label(string(a4),((x1,y1)+(x2,y2))/2 + (0,13),rgb(0.0,0.0,0.0)+fontsize(24));
 			}
 			if((a1 == a2) && (a1 == a3) && (a1 == a4) && (a1 == 0.0))
 			{
-				draw((x1,y1)--(x2,y2),rgb(0,0,0) + 2,Arrows(20));
+				draw((x1,y1)--(x2,y2),rgb(0.3,0,0.3));
+				draw((x1,y1)--(x1,y1)+dir((x1,y1)--(x2,y2))*margin,rgb(0.4,0,0.4) + 3);
+				draw((x2,y2)--(x2,y2)+dir((x2,y2)--(x1,y1))*margin,rgb(0.4,0,0.4) + 3);
+				label(string(0),((x1,y1)+(x2,y2))/2 + (0,13),rgb(0.0,0.0,0.0)+fontsize(24));
 			}
 		}
 		else
@@ -93,7 +107,9 @@ for(int i=0;i<no_clusters;++i)
 			A2 = Y + dir(X--(rotate(90,X)*Y)) * circle_size * 0.4 * (ct-1) / 2;
 			if(a1>0.0)
 			{
-				draw(A1--A2,rgb(0,0,0) + 2,Arrows(20));
+				draw(A1--A2,rgb(0.3,0,0.3));
+				draw(A1--A1+dir(A1--A2)*margin,rgb(0.4,0,0.4) + 3);
+				draw(A2--A2+dir(A2--A1)*margin,rgb(0.4,0,0.4) + 3);
 				if(A1.x < A2.x)
 					draw(Label(string(a1),Rotate(dir(A1--A2)),align=LeftSide),A1--A2,rgb(0.0,0.0,0.0)+fontsize(24));
 				else draw(Label(string(a1),Rotate(dir(A2--A1)),align=LeftSide),A2--A1,rgb(0.0,0.0,0.0)+fontsize(24));
@@ -102,7 +118,11 @@ for(int i=0;i<no_clusters;++i)
 			}
 			if(a2>0.0)
 			{
-				draw(A1--A2,rgb(0,0,0) + 2,Arrow(20));
+				draw(A1--A2,rgb(0.3,0,0.3));
+				draw(A1--A1+dir(A1--A2)*(margin-15),rgb(1,0,0) + 3);
+				draw(A2+dir(A2--A1)*margin--A2+dir(A2--A1)*15,rgb(0,0,1) + 3);
+				draw(A1--A1+dir(A1--A2)*margin,rgb(1,0,0) + 3,Arrow(20));
+				draw(A2+dir(A2--A1)*margin--A2,rgb(0,0,1) + 3,Arrow(20));
 				if(A1.x < A2.x)
 					draw(Label(string(a2),Rotate(dir(A1--A2)),align=LeftSide),A1--A2,rgb(0.0,0.0,0.0)+fontsize(24));
 				else draw(Label(string(a2),Rotate(dir(A2--A1)),align=LeftSide),A2--A1,rgb(0.0,0.0,0.0)+fontsize(24));
@@ -111,7 +131,11 @@ for(int i=0;i<no_clusters;++i)
 			}
 			if(a3>0.0)
 			{
-				draw(A2--A1,rgb(0,0,0) + 2,Arrow(20));
+				draw(A1--A2,rgb(0.3,0,0.3));
+				draw(A2--A2+dir(A2--A1)*(margin-15),rgb(1,0,0) + 3);
+				draw(A1+dir(A1--A2)*margin--A1+dir(A1--A2)*15,rgb(0,0,1) + 3);
+				draw(A2--A2+dir(A2--A1)*margin,rgb(1,0,0) + 3,Arrow(20));
+				draw(A1+dir(A1--A2)*margin--A1,rgb(0,0,1) + 3,Arrow(20));
 				if(A1.x < A2.x)
 					draw(Label(string(a3),Rotate(dir(A1--A2)),align=LeftSide),A1--A2,rgb(0.0,0.0,0.0)+fontsize(24));
 				else draw(Label(string(a3),Rotate(dir(A2--A1)),align=LeftSide),A2--A1,rgb(0.0,0.0,0.0)+fontsize(24));

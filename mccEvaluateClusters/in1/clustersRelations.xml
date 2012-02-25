@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>
 <xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2009/XMCDA-2.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2009/XMCDA-2.0.0 http://sma.uni.lu/d2cms/xmcda/_downloads/XMCDA-2.0.0.xsd'>
 
 <categoriesComparisons>
@@ -44,7 +45,7 @@
 				<categoryID>4</categoryID>
 			</terminal>
 			<value>
-				<label>p-</label>
+				<label>j</label>
 			</value>
 		</pair>
 		<pair>
@@ -55,7 +56,7 @@
 				<categoryID>5</categoryID>
 			</terminal>
 			<value>
-				<label>p+</label>
+				<label>p-</label>
 			</value>
 		</pair>
 		<pair>
@@ -66,7 +67,7 @@
 				<categoryID>6</categoryID>
 			</terminal>
 			<value>
-				<label>j</label>
+				<label>p+</label>
 			</value>
 		</pair>
 		<pair>
@@ -99,7 +100,7 @@
 				<categoryID>3</categoryID>
 			</terminal>
 			<value>
-				<label>p-</label>
+				<label>p+</label>
 			</value>
 		</pair>
 		<pair>
@@ -121,7 +122,7 @@
 				<categoryID>5</categoryID>
 			</terminal>
 			<value>
-				<label>p+</label>
+				<label>p-</label>
 			</value>
 		</pair>
 		<pair>
@@ -154,7 +155,7 @@
 				<categoryID>2</categoryID>
 			</terminal>
 			<value>
-				<label>p+</label>
+				<label>p-</label>
 			</value>
 		</pair>
 		<pair>
@@ -176,7 +177,7 @@
 				<categoryID>4</categoryID>
 			</terminal>
 			<value>
-				<label>p+</label>
+				<label>j</label>
 			</value>
 		</pair>
 		<pair>
@@ -187,7 +188,7 @@
 				<categoryID>5</categoryID>
 			</terminal>
 			<value>
-				<label>p+</label>
+				<label>p-</label>
 			</value>
 		</pair>
 		<pair>
@@ -209,7 +210,7 @@
 				<categoryID>1</categoryID>
 			</terminal>
 			<value>
-				<label>p+</label>
+				<label>j</label>
 			</value>
 		</pair>
 		<pair>
@@ -231,7 +232,7 @@
 				<categoryID>3</categoryID>
 			</terminal>
 			<value>
-				<label>p-</label>
+				<label>j</label>
 			</value>
 		</pair>
 		<pair>
@@ -253,7 +254,7 @@
 				<categoryID>5</categoryID>
 			</terminal>
 			<value>
-				<label>p+</label>
+				<label>p-</label>
 			</value>
 		</pair>
 		<pair>
@@ -275,7 +276,7 @@
 				<categoryID>1</categoryID>
 			</terminal>
 			<value>
-				<label>p-</label>
+				<label>p+</label>
 			</value>
 		</pair>
 		<pair>
@@ -286,7 +287,7 @@
 				<categoryID>2</categoryID>
 			</terminal>
 			<value>
-				<label>p-</label>
+				<label>p+</label>
 			</value>
 		</pair>
 		<pair>
@@ -297,7 +298,7 @@
 				<categoryID>3</categoryID>
 			</terminal>
 			<value>
-				<label>p-</label>
+				<label>p+</label>
 			</value>
 		</pair>
 		<pair>
@@ -308,7 +309,7 @@
 				<categoryID>4</categoryID>
 			</terminal>
 			<value>
-				<label>p-</label>
+				<label>p+</label>
 			</value>
 		</pair>
 		<pair>
@@ -330,7 +331,7 @@
 				<categoryID>6</categoryID>
 			</terminal>
 			<value>
-				<label>j</label>
+				<label>p+</label>
 			</value>
 		</pair>
 		<pair>
@@ -341,7 +342,7 @@
 				<categoryID>1</categoryID>
 			</terminal>
 			<value>
-				<label>j</label>
+				<label>p-</label>
 			</value>
 		</pair>
 		<pair>
@@ -385,7 +386,7 @@
 				<categoryID>5</categoryID>
 			</terminal>
 			<value>
-				<label>j</label>
+				<label>p-</label>
 			</value>
 		</pair>
 		<pair>
