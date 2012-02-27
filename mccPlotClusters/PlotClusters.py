@@ -11,58 +11,28 @@ class PlotClusters(object):
         self.RKdet = RKdet
     
     def PlotKideal(self, dir):
-
-        # write dot file
-        fileNameExt = dir+'/Kideal.dot'
-        fo = open(fileNameExt, 'w')
-        fo.write('graph G{\n')
-        fo.write('ratio=1;\n')
-        fo.write('size="%d,%d!";\n'%(self.N,self.N))
-        fo.write('node [shape = circle];\n')
-        for kname in self.K_names:
-            for i in range(len(self.K[kname])-1):
-                for j in range(len(self.K[kname]))[i+1:]:
-                    fo.write('%s -- %s;\n'%(str(self.objects.index(self.K[kname][i])),str(self.objects.index(self.K[kname][j]))))
-        for i in range(self.N):
-            fo.write('%s;\n'%str(i))
-        fo.write('}')
-        fo.close()
-        # execute neato
-        fi = dir+'/Kideal.dot'
-        fo = dir+'/Kideal.txt'
-        subprocess.call(["neato",fi,"-o"+fo])
-        # remove dot file
-        os.remove(fi)
-        # read neato result
-        fileNameExt = dir+'/Kideal.txt'
-        fo = open(fileNameExt, 'r')
-        lines = fo.readlines()[4:-1]
-        fo.close()
-        # remove neato result file
-        os.remove(fileNameExt)
-        # get node positions
-        positions = {}
-        for line in lines:
-            Y = line.split()
-            if Y[1] != '--':
-                positions[self.objects[int(Y[0])]] = (2*float(Y[1].split('"')[1].split(',')[0]),2*float(Y[1].split('"')[1].split(',')[1]))
-        #get cluster width
+        
+        sz = 700
+        opos = {}
         cluster_width = {}
         sumwidth = 0.0
         for kname in self.K_names:
-            cluster = self.K[kname]
-            avg_x = 0
-            avg_y = 0
-            for o in cluster:
-                avg_x += positions[o][0]
-                avg_y += positions[o][1]
-            avg_x /= float(len(cluster))
-            avg_y /= float(len(cluster))
+            n = len(self.K[kname])
             width = 0
-            for o in cluster:
-                dist = ((avg_x - positions[o][0])**2 + (avg_y - positions[o][1])**2)**0.5
-                if dist > width:
-                    width = dist
+            if n > 1:
+                ct = 0.0
+                for o in self.K[kname]:
+                    opos[o] = [1 * math.cos(ct*3.14*2/n),1 * math.sin(ct*3.14*2/n)]
+                    ct += 1
+                dist = ((opos[self.K[kname][0]][0] - opos[self.K[kname][1]][0])**2+(opos[self.K[kname][0]][1] - opos[self.K[kname][1]][1])**2)**0.5
+                if dist < 120:
+                    fact = 120/dist
+                    for o in self.K[kname]:
+                        opos[o][0] *= fact
+                        opos[o][1] *= fact
+                width = ((opos[self.K[kname][0]][0])**2+(opos[self.K[kname][0]][1])**2)**0.5
+            else:
+                opos[self.K[kname][0]] = [0,0]
             if width < 50:
                 width = 50
             cluster_width[kname] = width
@@ -81,6 +51,7 @@ class PlotClusters(object):
                     mindist = dist
             if mindist < 250:
                 fact = 250.0/mindist
+                sz *= fact
                 for kname in self.K_names:
                     Kpos[kname][0] *= fact
                     Kpos[kname][1] *= fact         
@@ -90,12 +61,12 @@ class PlotClusters(object):
             avg_x = 0
             avg_y = 0
             for o in cluster:
-                avg_x += positions[o][0]
-                avg_y += positions[o][1]
+                avg_x += opos[o][0]
+                avg_y += opos[o][1]
             avg_x /= float(len(cluster))
             avg_y /= float(len(cluster))
             for o in cluster:
-                object_positions[o] = (Kpos[kname][0] + avg_x - positions[o][0],Kpos[kname][1] + avg_y - positions[o][1])
+                object_positions[o] = (Kpos[kname][0] + avg_x - opos[o][0],Kpos[kname][1] + avg_y - opos[o][1])
         # load asy template
         fileNameExt = 'templateKideal.asy'
         fo = open(fileNameExt, 'r')
@@ -108,6 +79,7 @@ class PlotClusters(object):
         no_arcs = 0
         for kname in self.K_names:
             no_arcs += (len(self.K[kname]))*(len(self.K[kname])-1)/2
+        fo.write('int sz = %d;'%sz)
         fo.write('int no_arcs = %d;\n'%no_arcs)
         fo.write('int no_cluster_arcs = %d;\n'%((len(self.K_names))*(len(self.K_names)-1)/2))
         line = 'real[] arcs_x1={'
@@ -221,57 +193,27 @@ class PlotClusters(object):
         
     def PlotKreal(self, dir):
 
-                # write dot file
-        fileNameExt = dir+'/Kideal.dot'
-        fo = open(fileNameExt, 'w')
-        fo.write('graph G{\n')
-        fo.write('ratio=1;\n')
-        fo.write('size="%d,%d!";\n'%(self.N,self.N))
-        fo.write('node [shape = circle];\n')
-        for kname in self.K_names:
-            for i in range(len(self.K[kname])-1):
-                for j in range(len(self.K[kname]))[i+1:]:
-                    fo.write('%s -- %s;\n'%(str(self.objects.index(self.K[kname][i])),str(self.objects.index(self.K[kname][j]))))
-        for i in range(self.N):
-            fo.write('%s;\n'%str(i))
-        fo.write('}')
-        fo.close()
-        # execute neato
-        fi = dir+'/Kideal.dot'
-        fo = dir+'/Kideal.txt'
-        subprocess.call(["neato",fi,"-o"+fo])
-        # remove dot file
-        os.remove(fi)
-        # read neato result
-        fileNameExt = dir+'/Kideal.txt'
-        fo = open(fileNameExt, 'r')
-        lines = fo.readlines()[4:-1]
-        fo.close()
-        # remove neato result file
-        os.remove(fileNameExt)
-        # get node positions
-        positions = {}
-        for line in lines:
-            Y = line.split()
-            if Y[1] != '--':
-                positions[self.objects[int(Y[0])]] = (2*float(Y[1].split('"')[1].split(',')[0]),2*float(Y[1].split('"')[1].split(',')[1]))
-        #get cluster width
+        sz = 700
+        opos = {}
         cluster_width = {}
         sumwidth = 0.0
         for kname in self.K_names:
-            cluster = self.K[kname]
-            avg_x = 0
-            avg_y = 0
-            for o in cluster:
-                avg_x += positions[o][0]
-                avg_y += positions[o][1]
-            avg_x /= float(len(cluster))
-            avg_y /= float(len(cluster))
+            n = len(self.K[kname])
             width = 0
-            for o in cluster:
-                dist = ((avg_x - positions[o][0])**2 + (avg_y - positions[o][1])**2)**0.5
-                if dist > width:
-                    width = dist
+            if n > 1:
+                ct = 0.0
+                for o in self.K[kname]:
+                    opos[o] = [1 * math.cos(ct*3.14*2/n),1 * math.sin(ct*3.14*2/n)]
+                    ct += 1
+                dist = ((opos[self.K[kname][0]][0] - opos[self.K[kname][1]][0])**2+(opos[self.K[kname][0]][1] - opos[self.K[kname][1]][1])**2)**0.5
+                if dist < 120:
+                    fact = 120/dist
+                    for o in self.K[kname]:
+                        opos[o][0] *= fact
+                        opos[o][1] *= fact
+                width = ((opos[self.K[kname][0]][0])**2+(opos[self.K[kname][0]][1])**2)**0.5
+            else:
+                opos[self.K[kname][0]] = [0,0]
             if width < 50:
                 width = 50
             cluster_width[kname] = width
@@ -290,6 +232,7 @@ class PlotClusters(object):
                     mindist = dist
             if mindist < 250:
                 fact = 250.0/mindist
+                sz *= fact
                 for kname in self.K_names:
                     Kpos[kname][0] *= fact
                     Kpos[kname][1] *= fact         
@@ -299,12 +242,12 @@ class PlotClusters(object):
             avg_x = 0
             avg_y = 0
             for o in cluster:
-                avg_x += positions[o][0]
-                avg_y += positions[o][1]
+                avg_x += opos[o][0]
+                avg_y += opos[o][1]
             avg_x /= float(len(cluster))
             avg_y /= float(len(cluster))
             for o in cluster:
-                object_positions[o] = (Kpos[kname][0] + avg_x - positions[o][0],Kpos[kname][1] + avg_y - positions[o][1])
+                object_positions[o] = (Kpos[kname][0] + avg_x - opos[o][0],Kpos[kname][1] + avg_y - opos[o][1])
         # load asy template
         fileNameExt = 'templateKreal.asy'
         fo = open(fileNameExt, 'r')
@@ -314,6 +257,7 @@ class PlotClusters(object):
         fileNameExt = dir+'/Kreal.asy'
         fo = open(fileNameExt, 'w')
         # get arcs
+        fo.write('int sz = %d;'%sz)
         fo.write('int no_obj = %d;\n'%self.N)
         line = 'real[] obj_x={'
         for i in range(self.N):
@@ -355,7 +299,8 @@ class PlotClusters(object):
         
     def PlotKidealsum(self, dir):
 
-                # write dot file
+        # write dot file
+        sz = 700
         fileNameExt = dir+'/Kideal.dot'
         fo = open(fileNameExt, 'w')
         fo.write('graph G{\n')
@@ -424,6 +369,7 @@ class PlotClusters(object):
                     mindist = dist
             if mindist < 250:
                 fact = 250.0/mindist
+                sz *= fact
                 for kname in self.K_names:
                     Kpos[kname][0] *= fact
                     Kpos[kname][1] *= fact         
@@ -435,6 +381,7 @@ class PlotClusters(object):
         # write asy file
         fileNameExt = dir+'/Kidealsum.asy'
         fo = open(fileNameExt, 'w')
+        fo.write('int sz = %d;'%sz)
         fo.write('int no_clusters = %d;\n'%len(self.K_names))
         line = 'string[] cluster_name={'
         for kname in self.K_names:
@@ -479,7 +426,6 @@ class PlotClusters(object):
         fo.write(line2[:-1]+'};\n')
         fo.write(line3[:-1]+'};\n')
         fo.write(line4[:-1]+'};\n')
-        
     
         for line in template:
             fo.write(line)
@@ -491,7 +437,8 @@ class PlotClusters(object):
         
     def PlotKrealsum(self, dir):
 
-                # write dot file
+        # write dot file
+        sz = 700
         fileNameExt = dir+'/Kideal.dot'
         fo = open(fileNameExt, 'w')
         fo.write('graph G{\n')
@@ -560,6 +507,7 @@ class PlotClusters(object):
                     mindist = dist
             if mindist < 250:
                 fact = 250.0/mindist
+                sz *= fact
                 for kname in self.K_names:
                     Kpos[kname][0] *= fact
                     Kpos[kname][1] *= fact         
@@ -571,6 +519,7 @@ class PlotClusters(object):
         # write asy file
         fileNameExt = dir+'/Krealsum.asy'
         fo = open(fileNameExt, 'w')
+        fo.write('int sz = %d;'%sz)
         fo.write('int no_clusters = %d;\n'%len(self.K_names))
         line = 'string[] cluster_name={'
         for kname in self.K_names:
@@ -604,7 +553,6 @@ class PlotClusters(object):
         fo.write(line3[:-1]+'};\n')
         fo.write(line4[:-1]+'};\n')
         
-    
         for line in template:
             fo.write(line)
         fo.close()        

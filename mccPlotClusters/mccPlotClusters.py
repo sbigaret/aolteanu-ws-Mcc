@@ -99,7 +99,6 @@ def main(argv=None):
 
         if not errorList :
             PC = PlotClusters(alternativesId, alternativesRel, clustersId, clusters, clustersRel, clustersRelDet)
-            
             try:
                 PC.PlotKideal(out_dir)
                 fo = open(out_dir+"/Kideal.xml",'w')

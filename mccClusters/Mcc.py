@@ -70,13 +70,40 @@ class Mcc(object):
                 
         return p                 
     
+    def RKSummary(self, K):
+        
+        L = ['i','p+','p-','j']
+        RKsum = {}
+        for k1 in range(len(K)):
+            RKsum[k1] = {}
+            for k2 in range(len(K)):
+                RKsum[k1][k2] = {}
+                for m in L:
+                    RKsum[k1][k2][m] = 0.0
+                if k1 == k2:
+                    for k in range(len(K[k1])-1):
+                        for l in range(len(K[k1]))[k+1:]:
+                            o = K[k1][k]
+                            p = K[k1][l]
+                            for m in L:
+                                RKsum[k1][k1][m] += self.R[o][p][m]
+                else:
+                    for k in range(len(K[k1])):
+                        for l in range(len(K[k2])):
+                            o = K[k1][k]
+                            p = K[k2][l]
+                            for m in L:
+                                RKsum[k1][k2][m] += self.R[o][p][m]
+        return RKsum
+    
     def Run(self):
         
         C = self.FindCores()
         K1 = self.ExpandCores(C)
         K = self.RefineClusters(K1)
         RK = self.ExtractRK(K)
-        return K, RK
+        RKsum = self.RKSummary(K)
+        return K, RK, RKsum
     
     def FindCores(self):
         
@@ -161,7 +188,7 @@ class Mcc(object):
         best_K = []
         best_RK = []
         best_f = (float('-inf'),float('-inf'),0.0)
-        for i in range(3):
+        for i in range(5):
             K = self.SA(K1,RK1,100,30)
             RK = self.ExtractRK(K)
             f = self.Fitness(K,RK)
@@ -182,7 +209,7 @@ class Mcc(object):
                 
         K1 = best_K
         RK1 = best_RK
-        for i in range(3):
+        for i in range(5):
             K = self.SA(K1,RK1,100,30)
             RK = self.ExtractRK(K)
             f = self.Fitness(K,RK)

@@ -69,7 +69,7 @@ def main(argv=None):
 
             if not errorList :
                 alg = Mcc(alternativesId, alternativesRel, method_type)
-                K, RK = alg.Run()
+                K, RK, RKsum = alg.Run()
             
                 fo = open(out_dir+"/clusters.xml",'w')
                 PyXMCDA.writeHeader(fo)
@@ -109,6 +109,33 @@ def main(argv=None):
                         fo.write('\t\t</pair>\n')
                 fo.write('\t</pairs>\n')
                 fo.write('</categoriesComparisons>')
+                PyXMCDA.writeFooter(fo)
+                fo.close()
+                
+                L = ['i','p+','p-','j']
+            
+                fo = open(out_dir+"/clustersRelationsDetailed.xml",'w')
+                PyXMCDA.writeHeader(fo)
+                fo.write('<categoriesComparisons>\n')
+                fo.write('\t<pairs>\n')
+                for i in range(len(K)):
+                    for j in range(len(K)):
+                        fo.write('\t\t<pair>\n')
+                        fo.write('\t\t\t<initial>\n')
+                        fo.write('\t\t\t\t<categoryID>'+str(i+1)+'</categoryID>\n')
+                        fo.write('\t\t\t</initial>\n')
+                        fo.write('\t\t\t<terminal>\n')
+                        fo.write('\t\t\t\t<categoryID>'+str(j+1)+'</categoryID>\n')
+                        fo.write('\t\t\t</terminal>\n')
+                        fo.write('\t\t\t<values>\n')
+                        for l in L:
+                            fo.write('\t\t\t\t<value id="'+ l +'">\n')
+                            fo.write('\t\t\t\t\t<real>'+str(RKsum[i][j][l])+'</real>\n')
+                            fo.write('\t\t\t\t</value>\n')
+                        fo.write('\t\t\t</values>\n')
+                        fo.write('\t\t</pair>\n')
+                fo.write('\t</pairs>\n')
+                fo.write('</categoriesComparisons>\n')
                 PyXMCDA.writeFooter(fo)
                 fo.close()
                 

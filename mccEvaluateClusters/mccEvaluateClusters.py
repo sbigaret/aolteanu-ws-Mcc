@@ -93,39 +93,11 @@ def main(argv=None):
         if not errorList :
             E = MccEval(alternativesId, alternativesRel, clustersId, clusters, clustersRel)
             o_nr,o_r,o_t,o_q = E.GetPerformances()
-            RKsum = E.GetSummary()
             
             logList.append("%.2f %% (%d) relations in accordance to the Non-Relational Clustering problematic"%(200*o_nr/len(alternativesId)/(len(alternativesId) - 1),o_nr))
             logList.append("%.2f %% (%d) relations in accordance to the Relational Clustering problematic"%(200*o_r/len(alternativesId)/(len(alternativesId) - 1),o_r))
             logList.append("%d cycles detected"%(o_t))
-            logList.append("%d relations in discordance to the {p+,p-}-exclusivity property"%(o_q))
-            
-            L = ['i','p+','p-','j']
-            
-            fo = open(out_dir+"/clustersRelationsDetailed.xml",'w')
-            PyXMCDA.writeHeader(fo)
-            fo.write('<categoriesComparisons>\n')
-            fo.write('\t<pairs>\n')
-            for o in clustersId:
-                for p in clustersId:
-                    fo.write('\t\t<pair>\n')
-                    fo.write('\t\t\t<initial>\n')
-                    fo.write('\t\t\t\t<categoryID>'+o+'</categoryID>\n')
-                    fo.write('\t\t\t</initial>\n')
-                    fo.write('\t\t\t<terminal>\n')
-                    fo.write('\t\t\t\t<categoryID>'+p+'</categoryID>\n')
-                    fo.write('\t\t\t</terminal>\n')
-                    fo.write('\t\t\t<values>\n')
-                    for l in L:
-                        fo.write('\t\t\t\t<value id="'+ l +'">\n')
-                        fo.write('\t\t\t\t\t<real>'+str(RKsum[o][p][l])+'</real>\n')
-                        fo.write('\t\t\t\t</value>\n')
-                    fo.write('\t\t\t</values>\n')
-                    fo.write('\t\t</pair>\n')
-            fo.write('\t</pairs>\n')
-            fo.write('</categoriesComparisons>\n')
-            PyXMCDA.writeFooter(fo)
-            fo.close()                    
+            logList.append("%d relations in discordance to the {p+,p-}-exclusivity property"%(o_q))                    
             
         # Creating log and error file, messages.xml
         fileMessages = open(out_dir+"/messages.xml", 'w')

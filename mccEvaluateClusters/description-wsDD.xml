@@ -48,12 +48,5 @@
                      </documentation>
                      <xmcda tag="methodMessages"/>
               </output>      
-
-	      <output id="clustersRelationsDetailed" name="clustersRelationsDetailed" displayName="clustersRelationsDetailed">
-                     <documentation>
-                            <description>The detailed relation between clusters.</description>
-                     </documentation>
-                     <xmcda tag="categoriesComparisons"/>
-              </output>        
        </parameters>
 </program_description>

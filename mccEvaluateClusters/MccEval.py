@@ -12,34 +12,6 @@ class MccEval(object):
     def GetPerformances(self):
         
         return self.O_NR(),self.O_R(),self.O_T(),self.O_Q()
-    
-    def GetSummary(self):
-        
-        L = ['i','p+','p-','j']
-        RKsum = {}
-        for i in range(len(self.K_names)):
-            k1 = self.K_names[i]
-            RKsum[k1] = {}
-            for j in range(len(self.K_names)):
-                k2 = self.K_names[j]
-                RKsum[k1][k2] = {}
-                for m in L:
-                    RKsum[k1][k2][m] = 0.0
-                if i == j:
-                    for k in range(len(self.K[k1])-1):
-                        for l in range(len(self.K[k1]))[k+1:]:
-                            o = self.K[k1][k]
-                            p = self.K[k1][l]
-                            for m in L:
-                                RKsum[k1][k1][m] += self.R[o][p][m]
-                else:
-                    for k in range(len(self.K[k1])):
-                        for l in range(len(self.K[k2])):
-                            o = self.K[k1][k]
-                            p = self.K[k2][l]
-                            for m in L:
-                                RKsum[k1][k2][m] += self.R[o][p][m]
-        return RKsum
 
     def O_NR(self):
         o_NR = 0.0
