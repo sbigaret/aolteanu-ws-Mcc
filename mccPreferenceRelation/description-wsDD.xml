@@ -12,7 +12,7 @@
 		<input id="methodParameters" name="methodParameters" displayName="Cut Parameters" isoptional="1">
                      <documentation>
                             <description>Indicates the type of the cutting procedure (normal or bipolar) and the cut level.</description>
-                     </documentation
+                     </documentation>
                      <xmcda tag="methodParameters">
                         <![CDATA[
 			<methodParameters>
@@ -52,7 +52,7 @@
                      </xmcda>
               </input>
               
-              <input id="alternativesComparisons" name="alternativesComparisons" displayName="alternativesComparisons" isoptional="0">
+              <input id="alternativesComparisons" name="alternativesComparisons" displayName="outrankingRelation" isoptional="0">
                      <documentation>
                             <description>The outranking relation used to compare the objects.</description>
                      </documentation>

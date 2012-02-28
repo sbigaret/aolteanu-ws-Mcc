@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../docs/w3-ws/specificationData/description.xsd">
-       <program provider="ws-Mcc"
-              name="mccEvaluateClusters"
-              displayName="mccEvaluateClusters"
-              version="1.0" />
+       <program provider="ws-Mcc" name="mccEvaluateClusters" displayName="mccEvaluateClusters" version="1.0" />
        <documentation>
               <description>This web service evaluates clusters of alternatives based on the following clustering typology: non-relational, relational, ordered, {p+,p-}-exclusive relational and {p+,p-}-exclusive ordered multi-criteria clustering. It outputs 4 performance indicators.</description>
               <contact>Alexandru Olteanu (alexandru.olteanu@uni.lu)</contact>
@@ -14,28 +11,27 @@
                      <documentation>
                             <description>A list of alternatives. Alternatives can be activated or deactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), alternatives are considered as active. </description>
                      </documentation>
-                     <xmcda tag="alternatives">
-                     </xmcda>
+                     <xmcda tag="alternatives"/>
               </input>
-              <input id="preferenceRelation" name="preferenceRelation" displayName="preferenceRelation">
+              <input id="preferenceRelation" name="preferenceRelation" displayName="preferenceRelation" isoptional="0">
                      <documentation>
                             <description>The preference relation between alternatives.</description>
                      </documentation>
                      <xmcda tag="alternativesComparisons"/>
               </input>     
-	      <input id="clusters" name="clusters" displayName="clusters">
+	      <input id="clusters" name="clusters" displayName="clusters" isoptional="0">
                      <documentation>
                             <description>The cluster names.</description>
                      </documentation>
 		     <xmcda tag="categories"/>
               </input>     
-              <input id="alternativesAffectations" name="alternativesAffectations" displayName="alternativesAffectations">
+              <input id="alternativesAffectations" name="alternativesAffectations" displayName="alternativesAffectations" isoptional="0">
                      <documentation>
                             <description>The alternatives affectations to the clusters.</description>
                      </documentation>
                      <xmcda tag="alternativesAffectations"/>
               </input>             
-	      <input id="clustersRelations" name="clustersRelations" displayName="clustersRelations">
+	      <input id="clustersRelations" name="clustersRelations" displayName="clustersRelations" isoptional="0">
                      <documentation>
                             <description>The relation between clusters.</description>
                      </documentation>

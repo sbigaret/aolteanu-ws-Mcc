@@ -4,6 +4,10 @@
 
 <methodMessages>
 <logMessage><text><![CDATA[Execution ok]]></text></logMessage>
+<logMessage><text><![CDATA[84.62 % (77) relations in accordance to the Non-Relational Clustering problematic]]></text></logMessage>
+<logMessage><text><![CDATA[80.22 % (73) relations in accordance to the Relational Clustering problematic]]></text></logMessage>
+<logMessage><text><![CDATA[0 cycles detected]]></text></logMessage>
+<logMessage><text><![CDATA[1 relations in discordance to the {p+,p-}-exclusivity property]]></text></logMessage>
 </methodMessages>
 
 </xmcda:XMCDA>

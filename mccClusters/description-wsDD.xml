@@ -12,7 +12,7 @@
 		<input id="methodParameters" name="methodParameters" displayName="Method Type" isoptional="1">
                      <documentation>
                             <description>Indicates the type of clustering result to find: Non-relations (NR), Relationa (R), Ordered (O), Q-exclusive Relational (QR),  Q-exclusive Ordered (QO).</description>
-                     </documentation
+                     </documentation>
                      <xmcda tag="methodParameters">
                         <![CDATA[
 			<methodParameters>
@@ -24,10 +24,32 @@
 			</methodParameters>]]>
                      </xmcda>
                      <gui status="preferGUI">
-                            <entry id="%1" type="string" displayName="Method Type">
+                            <entry id="%1" type="enum" displayName="Method Type">
                                    <documentation>
-                                          <description>Indicates the type of clustering result to find.</description>
+                                          <description>Indicates the type of clustering.</description>
                                    </documentation>
+				   <items>
+					<item id="NR">
+					<description><![CDATA[Non-relational]]></description>
+					<value>NR</value>
+					</item>
+					<item id="R">
+					<description><![CDATA[Relational]]></description>
+					<value>R</value>
+					</item>
+					<item id="O">
+					<description><![CDATA[Ordered]]></description>
+					<value>O</value>
+					</item>
+					<item id="QR">
+					<description><![CDATA[Relational {p+,p-}-exclusive]]></description>
+					<value>QR</value>
+					</item>
+					<item id="OR">
+					<description><![CDATA[Ordered {p+,p-}-exclusive]]></description>
+					<value>OR</value>
+					</item>
+				   </items>
                                    <defaultValue>NR</defaultValue>
                             </entry>
                      </gui>
@@ -39,7 +61,7 @@
                      <xmcda tag="alternatives">
                      </xmcda>
               </input>
-              <input id="preferenceRelation" name="preferenceRelation" displayName="preferenceRelation">
+              <input id="preferenceRelation" name="preferenceRelation" displayName="preferenceRelation" isoptional="0">
                      <documentation>
                             <description>The preference relation between alternatives.</description>
                      </documentation>
