@@ -156,7 +156,11 @@ def main(argv=None):
                 fo.close()
                 os.remove(out_dir+'/Krealsum.png')              
 
-            except Exception as e: errorList.append("Could not plot clusters.")
+            except Exception:
+                import traceback
+                exc_type, exc_value, exc_traceback = sys.exc_info()
+                traceback.print_exception(exc_type, exc_value, exc_traceback)
+                errorList.append("Could not plot clusters.")
             
         # Creating log and error file, messages.xml
         fileMessages = open(out_dir+"/messages.xml", 'w')
