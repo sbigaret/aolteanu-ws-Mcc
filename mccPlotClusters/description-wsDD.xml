@@ -5,7 +5,7 @@
               displayName="mccPlotClusters"
               version="1.0" />
        <documentation>
-              <description>This web service gives 4 different representations of a set of clusters of alternatives. They are split in two, the first showing a detailed representation of all relations between alternatives, while the second showing a summary of these relations inside and between clusters. Each group of representations is again divided in two, the first showing the setting where this clustering result would be fully validates, while the second detailing the actual, imperfect setting.</description>
+              <description>This web service gives 4 different representations for a set of clusters of alternatives. There are two types of representations: detailed and summary. The first show all alternatives and the relations between them while the second represent each cluster as an element and contain the relations inside and between them. Each of these two types of representations are divided in two, one showing the ideal case where the current clustering result would be fully validated by the underlying relations between the alternatives, while the second showing the actual relations between alternatives. This is done in order to show the differences between the structure that we try to propose and the one that is really there. In order to the plots to be well represented, the names of the alternatives should be encoded in at most 3 characters.</description>
               <contact>Alexandru Olteanu (alexandru.olteanu@uni.lu)</contact>
        </documentation>
        <parameters>
