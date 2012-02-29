@@ -76,13 +76,35 @@ def main(argv=None):
             alternativesRel = PyXMCDA.getAlternativesComparisonsValues(xmltree_preferenceRelation, alternativesId)
             clustersId = PyXMCDA.getCategoriesID(xmltree_clusters)
             alternativesAffectations = PyXMCDA.getAlternativesAffectations(xmltree_alternativesAffectations)
-            clusters = {}
+            K = {}
             for cid in clustersId:
-                clusters[cid] = []
+                K[cid] = []
             for o in alternativesId:
-                clusters[alternativesAffectations[o]].append(o)
+                K[alternativesAffectations[o]].append(o)
             clustersRel = PyXMCDA.getCategoriesComparisonsValues(xmltree_clustersRelations, clustersId)
-            clustersRelDet = PyXMCDA.getCategoriesComparisonsAllValues(xmltree_clustersRelationsDetailed, clustersId)
+            RK = {}
+            for cid1 in clustersId:
+                RK[cid1] = {}
+                for cid2 in clustersId:
+                    if cid1 == cid2:
+                        RK[cid1][cid2] = 'i'
+                    else:
+                        RK[cid1][cid2] = ''
+            for cid1 in clustersId:
+                for cid2 in clustersId:
+                    if cid1 != cid2:
+                        if cid1 in clustersRel:
+                            if cid2 in clustersRel[cid1]:
+                                RK[cid1][cid2] = clustersRel[cid1][cid2]
+                        if cid2 in clustersRel:
+                            if cid1 in clustersRel[cid2]:
+                                if clustersRel[cid2][cid1] == 'p+':
+                                    RK[cid1][cid2] = 'p-'
+                                elif clustersRel[cid2][cid1] == 'p-':
+                                    RK[cid1][cid2] = 'p+'
+                                else:
+                                    RK[cid1][cid2] = clustersRel[cid2][cid1]
+            RKsum = PyXMCDA.getCategoriesComparisonsAllValues(xmltree_clustersRelationsDetailed, clustersId)
 
             if not alternativesId :
                 errorList.append("No active alternatives found.")
@@ -90,20 +112,20 @@ def main(argv=None):
                 errorList.append("Problems between relation and alternatives.")
             if not clustersId :
                 errorList.append("Problems finding clusters names.")
-            if not clusters :
+            if not K :
                 errorList.append("Problems with alternatives affectations.")
-            if not clustersRel :
+            if not RK :
                 errorList.append("Problems with clusters relations.")
-            if not clustersRelDet :
+            if not RKsum :
                 errorList.append("Problems with detailed clusters relations.")
 
         if not errorList :
-            PC = PlotClusters(alternativesId, alternativesRel, clustersId, clusters, clustersRel, clustersRelDet)
+            PC = PlotClusters(alternativesId, alternativesRel, clustersId, K, RK, RKsum)
             try:
                 PC.PlotKideal(out_dir)
                 fo = open(out_dir+"/Kideal.xml",'w')
                 PyXMCDA.writeHeader(fo)
-                fo.write('<alternativeValue>\n')
+                fo.write('<alternativeValue mcdaConcept="Ideal Relations between Clusters">\n')
                 fo.write('\t<value>\n')
                 fo.write('\t\t<image>')
                 fo.write(base64.b64encode(open(out_dir+"/Kideal.png","rb").read()))
@@ -117,7 +139,7 @@ def main(argv=None):
                 PC.PlotKreal(out_dir)
                 fo = open(out_dir+"/Kreal.xml",'w')
                 PyXMCDA.writeHeader(fo)
-                fo.write('<alternativeValue>\n')
+                fo.write('<alternativeValue mcdaConcept="Real Relations between Clusters">\n')
                 fo.write('\t<value>\n')
                 fo.write('\t\t<image>')
                 fo.write(base64.b64encode(open(out_dir+"/Kreal.png","rb").read()))
@@ -131,7 +153,7 @@ def main(argv=None):
                 PC.PlotKidealsum(out_dir)
                 fo = open(out_dir+"/Kidealsum.xml",'w')
                 PyXMCDA.writeHeader(fo)
-                fo.write('<alternativeValue>\n')
+                fo.write('<alternativeValue mcdaConcept="Summary of Ideal Relations between Clusters">\n')
                 fo.write('\t<value>\n')
                 fo.write('\t\t<image>')
                 fo.write(base64.b64encode(open(out_dir+"/Kidealsum.png","rb").read()))
@@ -145,7 +167,7 @@ def main(argv=None):
                 PC.PlotKrealsum(out_dir)      
                 fo = open(out_dir+"/Krealsum.xml",'w')
                 PyXMCDA.writeHeader(fo)
-                fo.write('<alternativeValue>\n')
+                fo.write('<alternativeValue mcdaConcept="Summary of Real Relations between Clusters">\n')
                 fo.write('\t<value>\n')
                 fo.write('\t\t<image>')
                 fo.write(base64.b64encode(open(out_dir+"/Krealsum.png","rb").read()))

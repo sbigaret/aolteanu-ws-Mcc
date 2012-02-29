@@ -8,10 +8,6 @@
 		<categoryID>1</categoryID>
 	</alternativeAffectation>
 	<alternativeAffectation>
-		<alternativeID>a09</alternativeID>
-		<categoryID>1</categoryID>
-	</alternativeAffectation>
-	<alternativeAffectation>
 		<alternativeID>a01</alternativeID>
 		<categoryID>1</categoryID>
 	</alternativeAffectation>
@@ -24,11 +20,19 @@
 		<categoryID>1</categoryID>
 	</alternativeAffectation>
 	<alternativeAffectation>
+		<alternativeID>a09</alternativeID>
+		<categoryID>1</categoryID>
+	</alternativeAffectation>
+	<alternativeAffectation>
 		<alternativeID>a12</alternativeID>
 		<categoryID>2</categoryID>
 	</alternativeAffectation>
 	<alternativeAffectation>
 		<alternativeID>a03</alternativeID>
+		<categoryID>2</categoryID>
+	</alternativeAffectation>
+	<alternativeAffectation>
+		<alternativeID>a05</alternativeID>
 		<categoryID>2</categoryID>
 	</alternativeAffectation>
 	<alternativeAffectation>
@@ -40,23 +44,19 @@
 		<categoryID>2</categoryID>
 	</alternativeAffectation>
 	<alternativeAffectation>
-		<alternativeID>a05</alternativeID>
-		<categoryID>2</categoryID>
-	</alternativeAffectation>
-	<alternativeAffectation>
-		<alternativeID>a02</alternativeID>
+		<alternativeID>a14</alternativeID>
 		<categoryID>3</categoryID>
 	</alternativeAffectation>
 	<alternativeAffectation>
-		<alternativeID>a14</alternativeID>
+		<alternativeID>a11</alternativeID>
 		<categoryID>4</categoryID>
 	</alternativeAffectation>
 	<alternativeAffectation>
-		<alternativeID>a06</alternativeID>
+		<alternativeID>a02</alternativeID>
 		<categoryID>5</categoryID>
 	</alternativeAffectation>
 	<alternativeAffectation>
-		<alternativeID>a11</alternativeID>
+		<alternativeID>a06</alternativeID>
 		<categoryID>6</categoryID>
 	</alternativeAffectation>
 </alternativesAffectations>

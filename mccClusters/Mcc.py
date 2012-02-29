@@ -70,40 +70,13 @@ class Mcc(object):
                 
         return p                 
     
-    def RKSummary(self, K):
-        
-        L = ['i','p+','p-','j']
-        RKsum = {}
-        for k1 in range(len(K)):
-            RKsum[k1] = {}
-            for k2 in range(len(K)):
-                RKsum[k1][k2] = {}
-                for m in L:
-                    RKsum[k1][k2][m] = 0.0
-                if k1 == k2:
-                    for k in range(len(K[k1])-1):
-                        for l in range(len(K[k1]))[k+1:]:
-                            o = K[k1][k]
-                            p = K[k1][l]
-                            for m in L:
-                                RKsum[k1][k1][m] += self.R[o][p][m]
-                else:
-                    for k in range(len(K[k1])):
-                        for l in range(len(K[k2])):
-                            o = K[k1][k]
-                            p = K[k2][l]
-                            for m in L:
-                                RKsum[k1][k2][m] += self.R[o][p][m]
-        return RKsum
-    
     def Run(self):
         
         C = self.FindCores()
         K1 = self.ExpandCores(C)
         K = self.RefineClusters(K1)
         RK = self.ExtractRK(K)
-        RKsum = self.RKSummary(K)
-        return K, RK, RKsum
+        return K, RK
     
     def FindCores(self):
         

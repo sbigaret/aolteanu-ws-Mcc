@@ -5,7 +5,7 @@ import subprocess
 
 import PyXMCDA
 
-from Mcc import *
+from ClustersRelationSummary import *
 
 from optparse import OptionParser
 
@@ -37,80 +37,80 @@ def main(argv=None):
             errorList.append("alternatives.xml is missing")
         if not os.path.isfile (in_dir+"/preferenceRelation.xml"):
             errorList.append("preferenceRelation.xml is missing")
-        if not os.path.isfile (in_dir+"/methodParameters.xml"):
-            errorList.append("methodParameters.xml is missing")
+        if not os.path.isfile (in_dir+"/clusters.xml"):
+            errorList.append("clusters.xml is missing")
+        if not os.path.isfile (in_dir+"/alternativesAffectations.xml"):
+            errorList.append("alternativesAffectations.xml is missing")
 
     if not errorList:
         # We parse all the mandatory input files
         xmltree_alternatives = PyXMCDA.parseValidate(in_dir+"/alternatives.xml")
         xmltree_preferenceRelation = PyXMCDA.parseValidate(in_dir+"/preferenceRelation.xml")
-        xmltree_methodParameters = PyXMCDA.parseValidate(in_dir+"/methodParameters.xml")
+        xmltree_clusters = PyXMCDA.parseValidate(in_dir+"/clusters.xml")
+        xmltree_alternativesAffectations = PyXMCDA.parseValidate(in_dir+"/alternativesAffectations.xml")
         
         # We check if all mandatory input files are valid
         if xmltree_alternatives == None :
             errorList.append("alternatives.xml can't be validated.")
         if xmltree_preferenceRelation == None :
             errorList.append("preferenceRelation.xml can't be validated.")
-        if xmltree_methodParameters == None :
-            errorList.append("methodParameters.xml can't be validated.")
+        if xmltree_clusters == None :
+            errorList.append("clusters.xml can't be validated.")
+        if xmltree_alternativesAffectations == None :
+            errorList.append("alternativesAffectations.xml can't be validated.")
             
         if not errorList :
 
             alternativesId = PyXMCDA.getAlternativesID(xmltree_alternatives)
             alternativesRel = PyXMCDA.getAlternativesComparisonsValues(xmltree_preferenceRelation, alternativesId)
-            method_type = PyXMCDA.getParameterByName(xmltree_methodParameters, "type")
+            clustersId = PyXMCDA.getCategoriesID(xmltree_clusters)
+            alternativesAffectations = PyXMCDA.getAlternativesAffectations(xmltree_alternativesAffectations)
+            clusters = {}
+            for cid in clustersId:
+                clusters[cid] = []
+            for o in alternativesId:
+                clusters[alternativesAffectations[o]].append(o)
 
             if not alternativesId :
                 errorList.append("No active alternatives found.")
             if not alternativesRel :
                 errorList.append("Problems between relation and alternatives.")
-            if not method_type:
-                errorList.append("No method type found.")
+            if not clustersId :
+                errorList.append("Problems finding clusters names.")
+            if not clusters :
+                errorList.append("Problems with alternatives affectations.")
 
             if not errorList :
-                alg = Mcc(alternativesId, alternativesRel, method_type)
-                K, RK = alg.Run()
+                CRS = ClustersRelationSummary(alternativesId, alternativesRel)
+                RKsum = CRS.RKSummary(clusters)
             
-                fo = open(out_dir+"/clusters.xml",'w')
-                PyXMCDA.writeHeader(fo)
-                fo.write('<categories>\n')
-                for i in range(len(K)):
-                    fo.write('\t<category id="'+str(i+1)+'"/>\n')
-                fo.write('</categories>\n')
-                PyXMCDA.writeFooter(fo)
-                fo.close()
-                
-                fo = open(out_dir+"/alternativesAffectations.xml",'w')
-                PyXMCDA.writeHeader(fo)
-                fo.write('<alternativesAffectations>\n')
-                for i in range(len(K)):
-                    for o in K[i]:
-                        fo.write('\t<alternativeAffectation>\n\t\t<alternativeID>'+o+'</alternativeID>\n\t\t<categoryID>'+str(i+1)+'</categoryID>\n\t</alternativeAffectation>\n')
-                fo.write('</alternativesAffectations>')
-                PyXMCDA.writeFooter(fo)
-                fo.close()
-                
-                fo = open(out_dir+"/clustersRelations.xml",'w')
+                L = ['i','p+','p-','j']
+            
+                fo = open(out_dir+"/clustersRelationsDetailed.xml",'w')
                 PyXMCDA.writeHeader(fo)
                 fo.write('<categoriesComparisons>\n')
                 fo.write('\t<pairs>\n')
-                for i in range(len(K)):
-                    for j in range(len(K)):                        
+                for i in clustersId:
+                    for j in clustersId:
                         fo.write('\t\t<pair>\n')
                         fo.write('\t\t\t<initial>\n')
-                        fo.write('\t\t\t\t<categoryID>'+str(i+1)+'</categoryID>\n')
+                        fo.write('\t\t\t\t<categoryID>'+i+'</categoryID>\n')
                         fo.write('\t\t\t</initial>\n')
                         fo.write('\t\t\t<terminal>\n')
-                        fo.write('\t\t\t\t<categoryID>'+str(j+1)+'</categoryID>\n')
+                        fo.write('\t\t\t\t<categoryID>'+j+'</categoryID>\n')
                         fo.write('\t\t\t</terminal>\n')
-                        fo.write('\t\t\t<value>\n')
-                        fo.write('\t\t\t\t<label>'+RK[i][j]+'</label>\n')
-                        fo.write('\t\t\t</value>\n')
+                        fo.write('\t\t\t<values>\n')
+                        for l in L:
+                            fo.write('\t\t\t\t<value id="'+ l +'">\n')
+                            fo.write('\t\t\t\t\t<real>'+str(RKsum[i][j][l])+'</real>\n')
+                            fo.write('\t\t\t\t</value>\n')
+                        fo.write('\t\t\t</values>\n')
                         fo.write('\t\t</pair>\n')
                 fo.write('\t</pairs>\n')
-                fo.write('</categoriesComparisons>')
+                fo.write('</categoriesComparisons>\n')
                 PyXMCDA.writeFooter(fo)
-                fo.close()                
+                fo.close()
+                
             
         # Creating log and error file, messages.xml
         fileMessages = open(out_dir+"/messages.xml", 'w')

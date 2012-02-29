@@ -72,12 +72,34 @@ def main(argv=None):
             alternativesRel = PyXMCDA.getAlternativesComparisonsValues(xmltree_preferenceRelation, alternativesId)
             clustersId = PyXMCDA.getCategoriesID(xmltree_clusters)
             alternativesAffectations = PyXMCDA.getAlternativesAffectations(xmltree_alternativesAffectations)
-            clusters = {}
+            K = {}
             for cid in clustersId:
-                clusters[cid] = []
+                K[cid] = []
             for o in alternativesId:
-                clusters[alternativesAffectations[o]].append(o)
+                K[alternativesAffectations[o]].append(o)
             clustersRel = PyXMCDA.getCategoriesComparisonsValues(xmltree_clustersRelations, clustersId)
+            RK = {}
+            for cid1 in clustersId:
+                RK[cid1] = {}
+                for cid2 in clustersId:
+                    if cid1 == cid2:
+                        RK[cid1][cid2] = 'i'
+                    else:
+                        RK[cid1][cid2] = ''
+            for cid1 in clustersId:
+                for cid2 in clustersId:
+                    if cid1 != cid2:
+                        if cid1 in clustersRel:
+                            if cid2 in clustersRel[cid1]:
+                                RK[cid1][cid2] = clustersRel[cid1][cid2]
+                        if cid2 in clustersRel:
+                            if cid1 in clustersRel[cid2]:
+                                if clustersRel[cid2][cid1] == 'p+':
+                                    RK[cid1][cid2] = 'p-'
+                                elif clustersRel[cid2][cid1] == 'p-':
+                                    RK[cid1][cid2] = 'p+'
+                                else:
+                                    RK[cid1][cid2] = clustersRel[cid2][cid1]
 
             if not alternativesId :
                 errorList.append("No active alternatives found.")
@@ -85,17 +107,17 @@ def main(argv=None):
                 errorList.append("Problems between relation and alternatives.")
             if not clustersId :
                 errorList.append("Problems finding clusters names.")
-            if not clusters :
+            if not K :
                 errorList.append("Problems with alternatives affectations.")
             if not clustersRel :
                 errorList.append("Problems with clusters relations.")
 
         if not errorList :
-            E = MccEval(alternativesId, alternativesRel, clustersId, clusters, clustersRel)
+            E = MccEval(alternativesId, alternativesRel, clustersId, K, RK)
             o_nr,o_r,o_t,o_q = E.GetPerformances()
             
-            logList.append("%.2f %% (%d) relations in accordance to the Non-Relational Clustering problematic"%(200*o_nr/len(alternativesId)/(len(alternativesId) - 1),o_nr))
-            logList.append("%.2f %% (%d) relations in accordance to the Relational Clustering problematic"%(200*o_r/len(alternativesId)/(len(alternativesId) - 1),o_r))
+            logList.append("%.2f %% (%d/%d) relations in accordance to the Non-Relational Clustering problematic"%(200*o_nr/len(alternativesId)/(len(alternativesId) - 1),o_nr,len(alternativesId)*(len(alternativesId) - 1)/2))
+            logList.append("%.2f %% (%d/%d) relations in accordance to the Relational Clustering problematic"%(200*o_r/len(alternativesId)/(len(alternativesId) - 1),o_r,len(alternativesId)*(len(alternativesId) - 1)/2))
             logList.append("%d cycles detected"%(o_t))
             logList.append("%d relations in discordance to the {p+,p-}-exclusivity property"%(o_q))                    
             
