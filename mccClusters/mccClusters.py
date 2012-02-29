@@ -75,7 +75,7 @@ def main(argv=None):
                 PyXMCDA.writeHeader(fo)
                 fo.write('<categories>\n')
                 for i in range(len(K)):
-                    fo.write('\t<category id="'+str(i+1)+'"/>\n')
+                    fo.write('\t<category id="'+'K'+str(i+1)+'"/>\n')
                 fo.write('</categories>\n')
                 PyXMCDA.writeFooter(fo)
                 fo.close()
@@ -85,7 +85,7 @@ def main(argv=None):
                 fo.write('<alternativesAffectations>\n')
                 for i in range(len(K)):
                     for o in K[i]:
-                        fo.write('\t<alternativeAffectation>\n\t\t<alternativeID>'+o+'</alternativeID>\n\t\t<categoryID>'+str(i+1)+'</categoryID>\n\t</alternativeAffectation>\n')
+                        fo.write('\t<alternativeAffectation>\n\t\t<alternativeID>'+o+'</alternativeID>\n\t\t<categoryID>'+'K'+str(i+1)+'</categoryID>\n\t</alternativeAffectation>\n')
                 fo.write('</alternativesAffectations>')
                 PyXMCDA.writeFooter(fo)
                 fo.close()
@@ -98,10 +98,10 @@ def main(argv=None):
                     for j in range(len(K)):                        
                         fo.write('\t\t<pair>\n')
                         fo.write('\t\t\t<initial>\n')
-                        fo.write('\t\t\t\t<categoryID>'+str(i+1)+'</categoryID>\n')
+                        fo.write('\t\t\t\t<categoryID>'+'K'+str(i+1)+'</categoryID>\n')
                         fo.write('\t\t\t</initial>\n')
                         fo.write('\t\t\t<terminal>\n')
-                        fo.write('\t\t\t\t<categoryID>'+str(j+1)+'</categoryID>\n')
+                        fo.write('\t\t\t\t<categoryID>'+'K'+str(j+1)+'</categoryID>\n')
                         fo.write('\t\t\t</terminal>\n')
                         fo.write('\t\t\t<value>\n')
                         fo.write('\t\t\t\t<label>'+RK[i][j]+'</label>\n')

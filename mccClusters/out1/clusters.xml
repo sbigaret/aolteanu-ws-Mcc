@@ -3,12 +3,12 @@
 <xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2009/XMCDA-2.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2009/XMCDA-2.0.0 http://sma.uni.lu/d2cms/xmcda/_downloads/XMCDA-2.0.0.xsd'>
 
 <categories>
-	<category id="1"/>
-	<category id="2"/>
-	<category id="3"/>
-	<category id="4"/>
-	<category id="5"/>
-	<category id="6"/>
+	<category id="K1"/>
+	<category id="K2"/>
+	<category id="K3"/>
+	<category id="K4"/>
+	<category id="K5"/>
+	<category id="K6"/>
 </categories>
 
 </xmcda:XMCDA>

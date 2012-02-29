@@ -6,10 +6,10 @@
 	<pairs>
 		<pair>
 			<initial>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</terminal>
 			<value>
 				<label>i</label>
@@ -17,10 +17,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -28,10 +28,21 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
+			</terminal>
+			<value>
+				<label>p-</label>
+			</value>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>K1</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>K4</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -39,21 +50,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>4</categoryID>
-			</terminal>
-			<value>
-				<label>p-</label>
-			</value>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>1</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</terminal>
 			<value>
 				<label>j</label>
@@ -61,10 +61,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -72,10 +72,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -83,10 +83,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</terminal>
 			<value>
 				<label>i</label>
@@ -94,10 +94,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -105,10 +105,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -116,10 +116,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -127,10 +127,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -138,10 +138,21 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
+			</terminal>
+			<value>
+				<label>p+</label>
+			</value>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>K3</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>K2</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -149,21 +160,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>2</categoryID>
-			</terminal>
-			<value>
-				<label>p-</label>
-			</value>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>3</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</terminal>
 			<value>
 				<label>i</label>
@@ -171,21 +171,21 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</terminal>
 			<value>
-				<label>p-</label>
+				<label>p+</label>
 			</value>
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</terminal>
 			<value>
 				<label>j</label>
@@ -193,10 +193,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -204,21 +204,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>1</categoryID>
-			</terminal>
-			<value>
-				<label>p+</label>
-			</value>
-		</pair>
-		<pair>
-			<initial>
-				<categoryID>4</categoryID>
-			</initial>
-			<terminal>
-				<categoryID>2</categoryID>
+				<categoryID>K1</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -226,21 +215,32 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>3</categoryID>
+				<categoryID>K2</categoryID>
 			</terminal>
 			<value>
-				<label>p+</label>
+				<label>p-</label>
 			</value>
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>4</categoryID>
+				<categoryID>K3</categoryID>
+			</terminal>
+			<value>
+				<label>p-</label>
+			</value>
+		</pair>
+		<pair>
+			<initial>
+				<categoryID>K4</categoryID>
+			</initial>
+			<terminal>
+				<categoryID>K4</categoryID>
 			</terminal>
 			<value>
 				<label>i</label>
@@ -248,10 +248,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</terminal>
 			<value>
 				<label>j</label>
@@ -259,10 +259,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -270,10 +270,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</terminal>
 			<value>
 				<label>j</label>
@@ -281,10 +281,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -292,10 +292,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</terminal>
 			<value>
 				<label>j</label>
@@ -303,10 +303,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</terminal>
 			<value>
 				<label>j</label>
@@ -314,10 +314,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</terminal>
 			<value>
 				<label>i</label>
@@ -325,10 +325,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</terminal>
 			<value>
 				<label>p-</label>
@@ -336,10 +336,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>1</categoryID>
+				<categoryID>K1</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -347,10 +347,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>2</categoryID>
+				<categoryID>K2</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -358,10 +358,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>3</categoryID>
+				<categoryID>K3</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -369,10 +369,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>4</categoryID>
+				<categoryID>K4</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -380,10 +380,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>5</categoryID>
+				<categoryID>K5</categoryID>
 			</terminal>
 			<value>
 				<label>p+</label>
@@ -391,10 +391,10 @@
 		</pair>
 		<pair>
 			<initial>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</initial>
 			<terminal>
-				<categoryID>6</categoryID>
+				<categoryID>K6</categoryID>
 			</terminal>
 			<value>
 				<label>i</label>
