@@ -60,13 +60,13 @@
                      </documentation>
                      <xmcda tag="alternativeValue"/>
               </output>  
-	      <output id="Kidealsum" name="Kidealsum" displayName="Kidealsum">
+	      <output id="Kidealsum" name="Kidealsum" displayName="Kidealsummary">
                      <documentation>
                             <description>Visualization of the summary of the ideal preference relation between alternatives, with respect to the current clusters.</description>
                      </documentation>
                      <xmcda tag="alternativeValue"/>
               </output>  
-	      <output id="Krealsum" name="Krealsum" displayName="Krealsum">
+	      <output id="Krealsum" name="Krealsum" displayName="Krealsummary">
                      <documentation>
                             <description>Visualization of the summary of the real preference relation between alternatives, with respect to the current clusters.</description>
                      </documentation>

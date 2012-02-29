@@ -192,7 +192,6 @@ class Mcc(object):
             K = self.SA(K1,RK1,100,30)
             RK = self.ExtractRK(K)
             f = self.Fitness(K,RK)
-            #print i,self.O_NR(K, RK),self.O_R(K, RK),self.O_T(K, RK),self.O_Q(K, RK)
             better = True
             if f[0] < best_f[0]:
                 better = False
@@ -213,7 +212,6 @@ class Mcc(object):
             K = self.SA(K1,RK1,100,30)
             RK = self.ExtractRK(K)
             f = self.Fitness(K,RK)
-            #print i,self.O_NR(K, RK),self.O_R(K, RK),self.O_T(K, RK),self.O_Q(K, RK)
             better = True
             if f[0] < best_f[0]:
                 better = False

@@ -29,10 +29,20 @@
 			</methodParameters>]]>
                      </xmcda>
                      <gui status="preferGUI">
-                            <entry id="%1" type="boolean" displayName="Bipolar">
+                            <entry id="%1" type="enum" displayName="Bipolar">
                                    <documentation>
                                           <description>Indicates if the cutting procedure is bipolar or not.</description>
                                    </documentation>
+                                   <items>
+					<item id="t">
+					<description>true</description>
+					<value>true</value>
+					</item>
+					<item id="f">
+					<description>false</description>
+					<value>false</value>
+					</item>
+				   </items>
                                    <defaultValue>false</defaultValue>
                             </entry>
                             <entry id="%2" type="float" displayName="Cut Level">
