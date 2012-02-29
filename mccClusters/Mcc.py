@@ -493,7 +493,7 @@ class Mcc(object):
                     RKj = self.ExtractRK12([o],K[j])
                     for p in K[j]:
                         if p != o:
-                            fi += self.R[o][p][RKj]
+                            fj += self.R[o][p][RKj]
                         
                 N.append([(fj-fi)/(self.N - 1),i,-1,o])
         return N
