@@ -22,6 +22,9 @@ class Mcc(object):
         elif methodType == "QO":
             self.Neighbours = self.Neighbours_5
             self.Fitness = self.O_5
+	else:
+	    self.Neighbours = self.Neighbours_1
+            self.Fitness = self.O_1
         
     def Neighbours(self):
         return 0
