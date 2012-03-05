@@ -44,7 +44,7 @@ def main(argv=None):
         # We parse all the mandatory input files
         xmltree_alternatives = PyXMCDA.parseValidate(in_dir+"/alternatives.xml")
         xmltree_alternativesComparisons = PyXMCDA.parseValidate(in_dir+"/alternativesComparisons.xml")
-	xmltree_methodParameters = PyXMCDA.parseValidate(in_dir+"/methodParameters.xml")
+        xmltree_methodParameters = PyXMCDA.parseValidate(in_dir+"/methodParameters.xml")
         
         # We check if all mandatory input files are valid
         if xmltree_alternatives == None :
@@ -58,17 +58,29 @@ def main(argv=None):
 
             alternativesId = PyXMCDA.getAlternativesID(xmltree_alternatives)
             alternativesRel = PyXMCDA.getAlternativesComparisons (xmltree_alternativesComparisons, alternativesId)
-	    bipolar = PyXMCDA.getParameterByName(xmltree_methodParameters, "bipolar")
-	    cutlvl = PyXMCDA.getParameterByName(xmltree_methodParameters, "cutlvl")
+            bipolar = PyXMCDA.getParameterByName(xmltree_methodParameters, "bipolar")
+            cutlvl = PyXMCDA.getParameterByName(xmltree_methodParameters, "cutlvl")
 
             if not alternativesId :
                 errorList.append("No active alternatives found.")
             if not alternativesRel :
                 errorList.append("Problems between relation and alternatives.")
-	    if not bipolar:
+            if not bipolar:
                 errorList.append("No bipolar parameter found.")
-	    if not cutlvl:
+            if not cutlvl:
                 errorList.append("No cutlvl parameter found.")
+            missing_eval = False
+            for o in alternativesId:
+                if not (o in alternativesRel):
+                    missing_eval = True
+                    break
+                else:
+                    for p in alternativesId:
+                        if not (p in alternativesRel[o]):
+                            missing_eval = True
+                            break
+            if missing_eval:
+                errorList.append("Not all alternatives from alternatives.xml contain evaluations in alternativesComparisons.xml. Possible inputs from different sources.")
 
         if not errorList :
             

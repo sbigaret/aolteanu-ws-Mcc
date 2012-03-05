@@ -22,12 +22,6 @@
                      </documentation>
                      <xmcda tag="alternativesComparisons"/>
               </input>
-<input id="clusters" name="clusters" displayName="clusters" isoptional="0">
-                     <documentation>
-                            <description>The cluster names.</description>
-                     </documentation>
-<xmcda tag="categories"/>
-              </input>
               <input id="alternativesAffectations" name="alternativesAffectations" displayName="alternativesAffectations" isoptional="0">
                      <documentation>
                             <description>The alternatives affectations to the clusters.</description>

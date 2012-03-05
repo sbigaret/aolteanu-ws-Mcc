@@ -37,8 +37,6 @@ def main(argv=None):
             errorList.append("alternatives.xml is missing")
         if not os.path.isfile (in_dir+"/preferenceRelation.xml"):
             errorList.append("preferenceRelation.xml is missing")
-        if not os.path.isfile (in_dir+"/clusters.xml"):
-            errorList.append("clusters.xml is missing")
         if not os.path.isfile (in_dir+"/alternativesAffectations.xml"):
             errorList.append("alternativesAffectations.xml is missing")
 
@@ -46,7 +44,6 @@ def main(argv=None):
         # We parse all the mandatory input files
         xmltree_alternatives = PyXMCDA.parseValidate(in_dir+"/alternatives.xml")
         xmltree_preferenceRelation = PyXMCDA.parseValidate(in_dir+"/preferenceRelation.xml")
-        xmltree_clusters = PyXMCDA.parseValidate(in_dir+"/clusters.xml")
         xmltree_alternativesAffectations = PyXMCDA.parseValidate(in_dir+"/alternativesAffectations.xml")
         
         # We check if all mandatory input files are valid
@@ -54,8 +51,6 @@ def main(argv=None):
             errorList.append("alternatives.xml can't be validated.")
         if xmltree_preferenceRelation == None :
             errorList.append("preferenceRelation.xml can't be validated.")
-        if xmltree_clusters == None :
-            errorList.append("clusters.xml can't be validated.")
         if xmltree_alternativesAffectations == None :
             errorList.append("alternativesAffectations.xml can't be validated.")
             
@@ -63,26 +58,56 @@ def main(argv=None):
 
             alternativesId = PyXMCDA.getAlternativesID(xmltree_alternatives)
             alternativesRel = PyXMCDA.getAlternativesComparisonsValues(xmltree_preferenceRelation, alternativesId)
-            clustersId = PyXMCDA.getCategoriesID(xmltree_clusters)
-            alternativesAffectations = PyXMCDA.getAlternativesAffectations(xmltree_alternativesAffectations)
-            clusters = {}
-            for cid in clustersId:
-                clusters[cid] = []
-            for o in alternativesId:
-                clusters[alternativesAffectations[o]].append(o)
-
+            
             if not alternativesId :
                 errorList.append("No active alternatives found.")
             if not alternativesRel :
                 errorList.append("Problems between relation and alternatives.")
-            if not clustersId :
-                errorList.append("Problems finding clusters names.")
-            if not clusters :
-                errorList.append("Problems with alternatives affectations.")
+            missing_eval = False
+            for o in alternativesId:
+                if not (o in alternativesRel):
+                    missing_eval = True
+                    break
+                else:
+                    for p in alternativesId:
+                        if not (p in alternativesRel[o]):
+                            missing_eval = True
+                            break
+                        else:
+                            if not ('i' in alternativesRel[o][p]):
+                                missing_eval = True
+                                break
+                            if not ('p+' in alternativesRel[o][p]):
+                                missing_eval = True
+                                break
+                            if not ('p-' in alternativesRel[o][p]):
+                                missing_eval = True
+                                break
+                            if not ('j' in alternativesRel[o][p]):
+                                missing_eval = True
+                                break
+            if missing_eval:
+                errorList.append("Not all alternatives from alternatives.xml contain evaluations in preferenceRelation.xml, or evaluations are incomplete. Possible inputs from different sources")
+                
+            alternativesAffectations = PyXMCDA.getAlternativesAffectations(xmltree_alternativesAffectations)
+            Knames = []
+            for o in alternativesId:
+                clusterId = alternativesAffectations[o]
+                if not (clusterId in Knames):
+                    Knames.append(clusterId)
+            
+            if Knames == []:
+                errorList.append("No clusters found.")
+                
+            K = {}
+            for clusterId in Knames:
+                K[clusterId] = []
+            for o in alternativesId:
+                K[alternativesAffectations[o]].append(o)
 
             if not errorList :
                 CRS = ClustersRelationSummary(alternativesId, alternativesRel)
-                RKsum = CRS.RKSummary(clusters)
+                RKsum = CRS.RKSummary(K)
             
                 L = ['i','p+','p-','j']
             
@@ -90,8 +115,8 @@ def main(argv=None):
                 PyXMCDA.writeHeader(fo)
                 fo.write('<categoriesComparisons>\n')
                 fo.write('\t<pairs>\n')
-                for i in clustersId:
-                    for j in clustersId:
+                for i in Knames:
+                    for j in Knames:
                         fo.write('\t\t<pair>\n')
                         fo.write('\t\t\t<initial>\n')
                         fo.write('\t\t\t\t<categoryID>'+i+'</categoryID>\n')

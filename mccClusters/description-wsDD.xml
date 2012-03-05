@@ -68,12 +68,6 @@
                      </gui>
               </input>
 
-<output id="clusters" name="clusters" displayName="clusters">
-                     <documentation>
-                            <description>The cluster names.</description>
-                     </documentation>
-<xmcda tag="categories"/>
-              </output>
               <output id="alternativesAffectations" name="alternativesAffectations" displayName="alternativesAffectations">
                      <documentation>
                             <description>The alternatives affectations to the clusters.</description>

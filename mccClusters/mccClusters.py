@@ -66,19 +66,35 @@ def main(argv=None):
                 errorList.append("Problems between relation and alternatives.")
             if not method_type:
                 errorList.append("No method type found.")
+            missing_eval = False
+            for o in alternativesId:
+                if not (o in alternativesRel):
+                    missing_eval = True
+                    break
+                else:
+                    for p in alternativesId:
+                        if not (p in alternativesRel[o]):
+                            missing_eval = True
+                            break
+                        else:
+                            if not ('i' in alternativesRel[o][p]):
+                                missing_eval = True
+                                break
+                            if not ('p+' in alternativesRel[o][p]):
+                                missing_eval = True
+                                break
+                            if not ('p-' in alternativesRel[o][p]):
+                                missing_eval = True
+                                break
+                            if not ('j' in alternativesRel[o][p]):
+                                missing_eval = True
+                                break
+            if missing_eval:
+                errorList.append("Not all alternatives from alternatives.xml contain evaluations in preferenceRelation.xml, or evaluations are incomplete. Possible inputs from different sources")
 
             if not errorList :
                 alg = Mcc(alternativesId, alternativesRel, method_type)
                 K, RK = alg.Run()
-            
-                fo = open(out_dir+"/clusters.xml",'w')
-                PyXMCDA.writeHeader(fo)
-                fo.write('<categories>\n')
-                for i in range(len(K)):
-                    fo.write('\t<category id="'+'K'+str(i+1)+'"/>\n')
-                fo.write('</categories>\n')
-                PyXMCDA.writeFooter(fo)
-                fo.close()
                 
                 fo = open(out_dir+"/alternativesAffectations.xml",'w')
                 PyXMCDA.writeHeader(fo)
