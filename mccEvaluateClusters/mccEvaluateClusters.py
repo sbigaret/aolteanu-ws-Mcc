@@ -140,7 +140,7 @@ def main(argv=None):
                                     RK[cid2][cid1] = 'p+'
                                 else:
                                     RK[cid2][cid1] = clustersRel[cid1][cid2]
-                        elif cid2 in clustersRel:
+                        if not found and cid2 in clustersRel:
                             if cid1 in clustersRel[cid2]:
                                 found = True
                                 RK[cid2][cid1] = clustersRel[cid2][cid1]
