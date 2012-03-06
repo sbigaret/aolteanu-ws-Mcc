@@ -165,13 +165,21 @@ def main(argv=None):
             logList.append("%.2f %% (%d/%d) relations in accordance to the Relational Clustering problematic"%(200*o_r/len(alternativesId)/(len(alternativesId) - 1),o_r,len(alternativesId)*(len(alternativesId) - 1)/2))
             logList.append("%d cycles detected"%(o_t))
             logList.append("%d relations in discordance to the {p+,p-}-exclusivity property"%(o_q))                    
-            
+
+        if not errorList :
+	    # Output results, results.xml
+            output = open(out_dir+"/results.xml", 'w')
+            PyXMCDA.writeHeader (output)
+            PyXMCDA.writeLogMessages (output, logList)
+	    PyXMCDA.writeFooter(output)
+            output.close()
+
         # Creating log and error file, messages.xml
         fileMessages = open(out_dir+"/messages.xml", 'w')
         PyXMCDA.writeHeader (fileMessages)
 
         if not errorList :
-            PyXMCDA.writeLogMessages (fileMessages, ["Execution ok"] + logList)
+            PyXMCDA.writeLogMessages (fileMessages, ["Execution ok"])
         else :
             PyXMCDA.writeErrorMessages (fileMessages, errorList)
 
