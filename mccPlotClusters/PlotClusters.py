@@ -1,17 +1,64 @@
 import math, subprocess, os
+
+def fix_neato_lines(lines):
+    """Makes all lines contains '[' and '];'.
+
+    Older versions of neato (ex. graphviz version 2.26.3 (20100126.1600))
+    put all on the same lines, while newer ones do not.
+
+    Example: old::
+
+        graph G {
+            graph [ratio=1, size="14,14!"];
+            node [label="\N", shape=circle];
+            graph [bb="0,0,516.03,505"];
+            1 [pos="52.028,471", width="0.5", height="0.51389"];
+
+    new::
+
+         graph G {
+            graph [bb="-99,-99,155.83,154.21",
+                   ratio=1,
+                   size="14,14!"
+            ];
+            node [label="\N",
+                  shape=circle
+            ];
+            1 [height=0.5,
+               pos="53.787,88.226",
+               width=0.5];
+
+    Since the functions PlotKidealsum() and PlotKrealsum are based on the old
+    way, it is necessary to filter the output of a newer neato before using it.
+    """
+    out = []
+    out_line = ''
+    out.append(lines[0]) # 1st line graph { left as-is
+    for line in lines[1:]:
+        out_line += line.strip()
+        if '];' in line:
+            out_line += '\n'
+            out.append(out_line)
+            out_line=''
+            continue
+    if out_line != '':
+        out.append(out_line)
+    return out
+
+
 class PlotClusters(object):
     def __init__(self, objects, R, K_names, K, RK, RKdet):
-        
+
         self.objects = objects
         self.N = len(objects)
         self.R = R
         self.K_names = K_names
         self.K = K
-        self.RK = RK        
+        self.RK = RK
         self.RKdet = RKdet
-    
+
     def PlotKideal(self, dir):
-        
+
         sz = 700
         opos = {}
         cluster_width = {}
@@ -54,7 +101,7 @@ class PlotClusters(object):
                 sz *= fact
                 for kname in self.K_names:
                     Kpos[kname][0] *= fact
-                    Kpos[kname][1] *= fact         
+                    Kpos[kname][1] *= fact
         object_positions = {}
         for kname in self.K_names:
             cluster = self.K[kname]
@@ -166,7 +213,7 @@ class PlotClusters(object):
                     line += '3,'
         line = line[:-1]+'};'
         fo.write(line+'\n')
-        # get point positions        
+        # get point positions
         no_points = 0
         for kname in self.K_names:
             no_points += len(self.K[kname])
@@ -182,15 +229,13 @@ class PlotClusters(object):
         fo.write(line1[:-1]+'};\n')
         fo.write(line2[:-1]+'};\n')
         fo.write(line3[:-1]+'};\n')
-    
+
         for line in template:
             fo.write(line)
-        fo.close()        
-        
+        fo.close()
+
         subprocess.call(["asy","-noV","-cd",dir,"Kideal.asy"])
-        
-        os.remove(dir+'/Kideal.asy')
-        
+
     def PlotKreal(self, dir):
 
         sz = 700
@@ -235,7 +280,7 @@ class PlotClusters(object):
                 sz *= fact
                 for kname in self.K_names:
                     Kpos[kname][0] *= fact
-                    Kpos[kname][1] *= fact         
+                    Kpos[kname][1] *= fact
         object_positions = {}
         for kname in self.K_names:
             cluster = self.K[kname]
@@ -288,20 +333,18 @@ class PlotClusters(object):
         for i in range(self.N):
             line += '"'+self.objects[i]+'",'
         fo.write(line[:-1]+'};\n')
-    
+
         for line in template:
             fo.write(line)
-        fo.close()        
-        
+        fo.close()
+
         subprocess.call(["asy","-noV","-cd",dir,"Kreal.asy"])
-        
-        os.remove(dir+'/Kreal.asy')
-        
+
     def PlotKidealsum(self, dir):
 
         # write dot file
         sz = 700
-        fileNameExt = dir+'/Kideal.dot'
+        fileNameExt = dir+'/Kidealsum.dot'
         fo = open(fileNameExt, 'w')
         fo.write('graph G{\n')
         fo.write('ratio=1;\n')
@@ -316,21 +359,26 @@ class PlotClusters(object):
         fo.write('}')
         fo.close()
         # execute neato
-        fi = dir+'/Kideal.dot'
-        fo = dir+'/Kideal.txt'
+        fi = dir+'/Kidealsum.dot'
+        fo = dir+'/Kidealsum.txt'
         subprocess.call(["neato",fi,"-o"+fo])
         # remove dot file
         os.remove(fi)
         # read neato result
-        fileNameExt = dir+'/Kideal.txt'
+        fileNameExt = dir+'/Kidealsum.txt'
         fo = open(fileNameExt, 'r')
-        lines = fo.readlines()[4:-1]
+        lines = fo.readlines()
+        #
+        lines = fix_neato_lines(lines)
         fo.close()
         # remove neato result file
         os.remove(fileNameExt)
         # get node positions
         positions = {}
         for line in lines:
+            # ignore every line not starting with a number
+            if line.strip()[0] not in ('0','1','2','3','4','5','6','7','8','9'):
+                continue
             Y = line.split()
             if Y[1] != '--':
                 positions[self.objects[int(Y[0])]] = (2*float(Y[1].split('"')[1].split(',')[0]),2*float(Y[1].split('"')[1].split(',')[1]))
@@ -372,7 +420,7 @@ class PlotClusters(object):
                 sz *= fact
                 for kname in self.K_names:
                     Kpos[kname][0] *= fact
-                    Kpos[kname][1] *= fact         
+                    Kpos[kname][1] *= fact
         # load asy template
         fileNameExt = 'templateKsum.asy'
         fo = open(fileNameExt, 'r')
@@ -426,20 +474,18 @@ class PlotClusters(object):
         fo.write(line2[:-1]+'};\n')
         fo.write(line3[:-1]+'};\n')
         fo.write(line4[:-1]+'};\n')
-    
+
         for line in template:
             fo.write(line)
-        fo.close()        
-        
+        fo.close()
+
         subprocess.call(["asy","-noV","-cd",dir,"Kidealsum.asy"])
-        
-        os.remove(dir+'/Kidealsum.asy')
-        
+
     def PlotKrealsum(self, dir):
 
         # write dot file
         sz = 700
-        fileNameExt = dir+'/Kideal.dot'
+        fileNameExt = dir+'/Krealsum.dot'
         fo = open(fileNameExt, 'w')
         fo.write('graph G{\n')
         fo.write('ratio=1;\n')
@@ -454,21 +500,25 @@ class PlotClusters(object):
         fo.write('}')
         fo.close()
         # execute neato
-        fi = dir+'/Kideal.dot'
-        fo = dir+'/Kideal.txt'
+        fi = dir+'/Krealsum.dot'
+        fo = dir+'/Krealsum.txt'
         subprocess.call(["neato",fi,"-o"+fo])
         # remove dot file
         os.remove(fi)
         # read neato result
-        fileNameExt = dir+'/Kideal.txt'
+        fileNameExt = dir+'/Krealsum.txt'
         fo = open(fileNameExt, 'r')
-        lines = fo.readlines()[4:-1]
+        lines = fo.readlines()
         fo.close()
+        lines = fix_neato_lines(lines)
         # remove neato result file
         os.remove(fileNameExt)
         # get node positions
         positions = {}
         for line in lines:
+            # ignore every line not starting with a number
+            if line.strip()[0] not in ('0','1','2','3','4','5','6','7','8','9'):
+                continue
             Y = line.split()
             if Y[1] != '--':
                 positions[self.objects[int(Y[0])]] = (2*float(Y[1].split('"')[1].split(',')[0]),2*float(Y[1].split('"')[1].split(',')[1]))
@@ -510,7 +560,7 @@ class PlotClusters(object):
                 sz *= fact
                 for kname in self.K_names:
                     Kpos[kname][0] *= fact
-                    Kpos[kname][1] *= fact         
+                    Kpos[kname][1] *= fact
         # load asy template
         fileNameExt = 'templateKsum.asy'
         fo = open(fileNameExt, 'r')
@@ -552,11 +602,9 @@ class PlotClusters(object):
         fo.write(line2[:-1]+'};\n')
         fo.write(line3[:-1]+'};\n')
         fo.write(line4[:-1]+'};\n')
-        
+
         for line in template:
             fo.write(line)
-        fo.close()        
-        
+        fo.close()
+
         subprocess.call(["asy","-noV","-cd",dir,"Krealsum.asy"])
-        
-        os.remove(dir+'/Krealsum.asy')
